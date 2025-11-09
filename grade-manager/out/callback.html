@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Влизане...</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .loading-container {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #667eea;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .error {
+      background: #fff5f5;
+      border: 1px solid #fc8181;
+      color: #c53030;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <h2>Влизане...</h2>
+    <p id="status">Проверяваме вашите данни</p>
+    <div id="error" class="error" style="display: none;"></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+    // Get base path for GitHub Pages
+    const basePath = window.location.pathname.includes('/nvnacs50-dashboard/') ? '/nvnacs50-dashboard' : '';
+
+    const statusEl = document.getElementById('status');
+    const errorEl = document.getElementById('error');
+
+    function showError(message) {
+      errorEl.textContent = message;
+      errorEl.style.display = 'block';
+      statusEl.style.display = 'none';
+    }
+
+    async function handleCallback() {
+      try {
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state');
+
+        // Verify state to prevent CSRF
+        const savedState = sessionStorage.getItem('oauth_state');
+        if (!state || state !== savedState) {
+          throw new Error('Invalid state parameter - възможна CSRF атака');
+        }
+        sessionStorage.removeItem('oauth_state');
+
+        if (!code) {
+          throw new Error('Липсва authorization code');
+        }
+
+        // Exchange code for token
+        statusEl.textContent = 'Получаване на access token...';
+        const tokenResponse = await fetch(CONFIG.OAUTH_PROXY_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code })
+        });
+
+        if (!tokenResponse.ok) {
+          const error = await tokenResponse.text();
+          throw new Error(`Token exchange failed: ${error}`);
+        }
+
+        const tokenData = await tokenResponse.json();
+        if (tokenData.error) {
+          throw new Error(`GitHub OAuth error: ${tokenData.error_description || tokenData.error}`);
+        }
+
+        const token = tokenData.access_token;
+
+        // Fetch user data
+        statusEl.textContent = 'Зареждане на потребителски данни...';
+        const userResponse = await fetch('https://api.github.com/user', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+
+        if (!userResponse.ok) {
+          throw new Error('Failed to fetch user data');
+        }
+
+        const user = await userResponse.json();
+
+        // Check organization membership and role
+        statusEl.textContent = 'Проверка на организационна роля...';
+        const orgRole = await checkOrganizationRole(token, user.login);
+
+        // Store auth data
+        localStorage.setItem('gh_token', token);
+        localStorage.setItem('gh_user', JSON.stringify(user));
+        localStorage.setItem('gh_role', orgRole);
+
+        // Redirect based on role
+        if (orgRole === 'teacher') {
+          statusEl.textContent = 'Добре дошли, преподавател!';
+          setTimeout(() => window.location.href = '/nvnacs50-dashboard/teacher/', 500);
+        } else {
+          statusEl.textContent = 'Добре дошли, студент!';
+          setTimeout(() => window.location.href = '/nvnacs50-dashboard/student/dashboard.html', 500);
+        }
+
+      } catch (error) {
+        console.error('Auth error:', error);
+        showError(error.message);
+        setTimeout(() => {
+          window.location.href = `${basePath}/`;
+        }, 3000);
+      }
+    }
+
+    async function checkOrganizationRole(token, username) {
+      // If no organization specified, everyone is a student
+      if (!CONFIG.GITHUB_CLASSROOM_ORG) {
+        return 'student';
+      }
+
+      try {
+        // Use authenticated user's org membership endpoint
+        const membershipResponse = await fetch(
+          `https://api.github.com/user/memberships/orgs/${CONFIG.GITHUB_CLASSROOM_ORG}`,
+          {
+            headers: {
+              'Authorization': `Bearer ${token}`,
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          }
+        );
+
+        if (!membershipResponse.ok) {
+          console.warn('Not a member of organization or API error:', await membershipResponse.text());
+          return 'student';
+        }
+
+        const membership = await membershipResponse.json();
+        console.log('Organization membership:', membership);
+
+        // Check if user is admin (owner or admin role)
+        // GitHub returns 'admin' for both owners and admins
+        if (membership.role === 'admin') {
+          return 'teacher';
+        }
+
+        // Regular member is a student
+        return 'student';
+
+      } catch (error) {
+        console.error('Failed to check organization role:', error);
+        // Default to student if check fails
+        return 'student';
+      }
+    }
+
+    // Start the authentication flow
+    handleCallback();
+  </script>
+</body>
+</html>
