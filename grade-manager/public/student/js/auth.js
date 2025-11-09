@@ -81,7 +81,7 @@ class Auth {
       this.setAuth(token, user);
 
       // Clean URL
-      window.history.replaceState({}, document.title, '/dashboard.html');
+      window.history.replaceState({}, document.title, '/student/dashboard.html');
 
       return { token, user };
     } catch (error) {
@@ -139,7 +139,7 @@ class Auth {
   // Logout
   logout() {
     this.clearAuth();
-    window.location.href = '/index.html';
+    window.location.href = '/student/index.html';
   }
 }
 
@@ -147,7 +147,7 @@ class Auth {
 const auth = new Auth();
 
 // Login button handler (for index.html)
-if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+if (window.location.pathname === '/student/' || window.location.pathname === '/student/index.html') {
   window.addEventListener('DOMContentLoaded', () => {
     const loginBtn = document.getElementById('github-login');
     if (loginBtn) {
@@ -158,13 +158,13 @@ if (window.location.pathname === '/' || window.location.pathname === '/index.htm
 
     // If already authenticated, redirect to dashboard
     if (auth.isAuthenticated()) {
-      window.location.href = '/dashboard.html';
+      window.location.href = '/student/dashboard.html';
     }
   });
 }
 
 // Logout button handler (for dashboard.html)
-if (window.location.pathname === '/dashboard.html') {
+if (window.location.pathname === '/student/dashboard.html') {
   window.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.getElementById('logout');
     if (logoutBtn) {

@@ -1,68 +1,132 @@
-# 📚 GitHub Classroom Dashboard
+# 📊 Grade Manager
 
-**Client-side student dashboard за GitHub Classroom assignments**
+**Интегрирано решение за управление на оценки в GitHub Classroom**
 
 ![Status](https://img.shields.io/badge/status-ready-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## 🎯 Какво прави?
 
-Статичен уеб dashboard, който позволява на студентите да видят своите GitHub Classroom задачи и прогрес:
+Това е комбинирано приложение с **два интерфейса**:
 
-- ✅ **GitHub OAuth влизане** - студентите влизат с техните GitHub акаунти
-- 📝 **Преглед на задачи** - виж всички assignment repositories
-- ✅ **Статус на тестове** - автоматични резултати от GitHub Actions
-- 📅 **Commit history** - последни commits и дати
-- 🌙 **Dark mode** - автоматична dark/light тема
-- 🔒 **Privacy-first** - всеки вижда само своите данни
+### 👨‍🏫 За преподаватели (`/`)
+- **Drag & drop CSV файлове** от GitHub Classroom
+- **Автоматично изчисляване на оценки** и статистики
+- **Визуализация на прогреса** на студентите
+- **CS50-специфична логика** за choice groups
+
+### 👨‍🎓 За студенти (`/student/`)
+- **GitHub OAuth влизане** - студентите влизат с техните GitHub акаунти
+- **Преглед на задачи** - виж всички assignment repositories
+- **Статус на тестове** - автоматични резултати от GitHub Actions
+- **Commit history** - последни commits и дати
+- **Privacy-first** - всеки вижда само своите данни
 
 ## 🚀 Quick Start
 
-### За студенти:
-1. Отиди на dashboard URL-а (предоставен от преподавател)
+### Deployment (GitHub Pages)
+
+**Първоначална настройка:**
+```bash
+# Clone repository
+git clone https://github.com/mixaelaavramova/grade-manager.git
+cd grade-manager
+
+# Install dependencies
+cd grade-manager
+npm install
+
+# Build
+npm run build
+```
+
+**За деплой на GitHub Pages:**
+1. GitHub Pages вече е конфигуриран с GitHub Actions (`.github/workflows/deploy.yml`)
+2. При всеки push на `main` branch, автоматично се build-ва и deploy-ва
+3. Достъп на: `https://mixaelaavramova.github.io/grade-manager/`
+
+### За преподаватели
+
+1. Отиди на `https://mixaelaavramova.github.io/grade-manager/`
+2. Drag & drop CSV файлове от GitHub Classroom
+3. Виж статистики и оценки
+
+### За студенти
+
+**Първо:** Преподавателят трябва да настрои OAuth (виж [SETUP.md](SETUP.md))
+
+1. Отиди на `https://mixaelaavramova.github.io/grade-manager/student/`
 2. Кликни "Влез с GitHub"
 3. Виж своите задачи!
-
-### За преподаватели:
-Виж [SETUP.md](SETUP.md) за пълни инструкции.
-
-**Накратко:**
-1. Създай GitHub OAuth App
-2. Deploy Cloudflare Worker за OAuth
-3. Конфигурирай `config.js`
-4. Deploy на GitHub Pages
 
 ## 📁 Структура на проекта
 
 ```
-grades-manager/
-├── index.html              # Landing page
-├── dashboard.html          # Main dashboard
-├── config.js              # Configuration
-├── css/
-│   └── style.css          # Styles
-├── js/
-│   ├── auth.js            # GitHub OAuth
-│   ├── github-api.js      # GitHub API client
-│   └── dashboard.js       # Dashboard logic
+grade-manager/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions за auto-deploy
+├── grade-manager/              # Next.js приложение (преподаватели)
+│   ├── src/
+│   │   └── app/
+│   │       ├── page.tsx        # Main grade manager UI
+│   │       ├── layout.tsx      # App layout
+│   │       └── globals.css     # Styles
+│   ├── public/
+│   │   └── student/            # Student dashboard (статични файлове)
+│   │       ├── index.html      # Student login page
+│   │       ├── dashboard.html  # Student dashboard
+│   │       ├── config.js       # OAuth конфигурация
+│   │       ├── js/
+│   │       │   ├── auth.js     # GitHub OAuth
+│   │       │   ├── github-api.js
+│   │       │   └── dashboard.js
+│   │       └── css/
+│   │           └── style.css
+│   ├── package.json
+│   ├── next.config.js
+│   └── tsconfig.json
 ├── cloudflare-worker/
-│   ├── worker.js          # OAuth token exchange
-│   └── wrangler.toml      # Cloudflare config
-├── SETUP.md               # Detailed setup guide
-└── README.md              # This file
+│   ├── worker.js               # OAuth token exchange
+│   └── wrangler.toml           # Cloudflare config
+├── SETUP.md                    # Детайлни инструкции за настройка
+└── README.md                   # Този файл
 ```
 
 ## 🛠️ Технологии
 
+### Преподавателски dashboard:
+- **Frontend:** Next.js 14, React, TypeScript
+- **Styling:** Tailwind CSS
+- **Hosting:** GitHub Pages
+- **Build:** Static export
+
+### Студентски dashboard:
 - **Frontend:** Vanilla JavaScript, HTML, CSS
 - **Auth:** GitHub OAuth 2.0
 - **API:** GitHub REST API v3
-- **Hosting:** GitHub Pages
 - **Serverless:** Cloudflare Workers (OAuth proxy)
 
 ## 🎨 Features
 
-### Dashboard показва:
+### Преподавателски dashboard:
+
+- **CSV Import:**
+  - Drag & drop множество CSV файлове
+  - Автоматично извличане на assignment имена
+  - Автоматично определяне на max points
+
+- **Статистики:**
+  - Обща статистика (passed/total students)
+  - Per-assignment статистики
+  - Visualизация с цветове (зелен=100%, жълт=50-99%, червен=<50%)
+
+- **CS50 Choice Groups:**
+  - Автоматично detection на choice groups
+  - Студентът трябва да има perfect score на поне 1 от група
+  - Динамична визуализация на requirements
+
+### Студентски dashboard:
 
 - **Общ преглед:**
   - Общо задачи
@@ -75,13 +139,6 @@ grades-manager/
   - Последен commit и дата
   - Статус на автоматични тестове (от GitHub Actions)
   - Линк към repository
-
-### Филтриране:
-
-Dashboard показва само repos които:
-- Са owned или collaborator repos на студента
-- Match-ват определен naming pattern
-- (Опционално) Са от конкретна GitHub Organization
 
 ## 🔒 Security & Privacy
 
@@ -105,8 +162,34 @@ Dashboard показва само repos които:
 
 ## 📖 Документация
 
-- **[SETUP.md](SETUP.md)** - Пълни инструкции за настройка
+- **[SETUP.md](SETUP.md)** - Пълни инструкции за настройка на OAuth и deployment
 - **[github-classroom-dashboard-guide.md](github-classroom-dashboard-guide.md)** - Детайлен архитектурен guide
+
+## 🔧 Development
+
+```bash
+# Install dependencies
+cd grade-manager
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Test production build locally
+npm start
+```
+
+## 🚢 Deployment Checklist
+
+- [ ] Настрой GitHub OAuth App
+- [ ] Deploy Cloudflare Worker за OAuth
+- [ ] Конфигурирай `grade-manager/public/student/config.js`
+- [ ] Enable GitHub Pages в repo settings
+- [ ] Push промени към `main` branch
+- [ ] Провери deployment на `https://mixaelaavramova.github.io/grade-manager/`
 
 ## 🤝 Contributing
 

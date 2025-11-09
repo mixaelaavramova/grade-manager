@@ -15,7 +15,7 @@ async function init() {
         await auth.handleCallback();
       } else {
         // Not authenticated and no callback - redirect to login
-        window.location.href = '/index.html';
+        window.location.href = '/student/index.html';
         return;
       }
     }
@@ -38,7 +38,7 @@ async function init() {
     showError('Грешка при зареждане на данните. Моля, влезте отново.');
     auth.clearAuth();
     setTimeout(() => {
-      window.location.href = '/index.html';
+      window.location.href = '/student/index.html';
     }, 2000);
   }
 }

@@ -20,7 +20,7 @@ const CONFIG = {
 
   // App URLs (автоматично се определят от window.location)
   get REDIRECT_URI() {
-    return `${window.location.origin}/dashboard.html`;
+    return `${window.location.origin}/student/dashboard.html`;
   },
 
   get BASE_URL() {
