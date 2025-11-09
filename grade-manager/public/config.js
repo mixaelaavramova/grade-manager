@@ -3,7 +3,7 @@
 
 const CONFIG = {
   // GitHub OAuth App Client ID (публичен, може да е в кода)
-  GITHUB_CLIENT_ID: 'Ov23liKzqluGpPURDE5f',
+  GITHUB_CLIENT_ID: 'Ov23li88GTM0e75wAX9p',
 
   // URL на Cloudflare Worker за token exchange
   OAUTH_PROXY_URL: 'https://github-classroom-oauth.m-avramova.workers.dev/auth',
