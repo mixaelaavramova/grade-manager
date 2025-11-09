@@ -31,6 +31,15 @@ jobs:
           cd grade-manager
           npm run build
 
+      - name: Copy static files to output
+        run: |
+          # Copy login, callback, and config to root of output
+          cp grade-manager/public/index.html grade-manager/out/
+          cp grade-manager/public/callback.html grade-manager/out/
+          cp grade-manager/public/config.js grade-manager/out/
+          # Copy student dashboard
+          cp -r grade-manager/public/student grade-manager/out/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
