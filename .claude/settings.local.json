@@ -8,7 +8,15 @@
       "Bash(git rm:*)",
       "Bash(git commit:*)",
       "Bash(git branch:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(cp:*)",
+      "Bash(cloudflare-worker/worker.js)",
+      "Bash(cloudflare-worker/wrangler.toml)",
+      "Bash(gh run list:*)",
+      "Bash(wrangler deploy:*)",
+      "Bash(curl:*)",
+      "Bash(printf:*)",
+      "Bash(wrangler secret put:*)"
     ],
     "deny": [],
     "ask": []

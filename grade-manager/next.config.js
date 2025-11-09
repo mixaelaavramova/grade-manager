@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/teacher',
+  basePath: '/grade-manager/teacher',
   images: {
     unoptimized: true,
   },

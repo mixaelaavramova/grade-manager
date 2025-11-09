@@ -104,9 +104,6 @@
 
   <script src="config.js"></script>
   <script>
-    // Get base path for GitHub Pages
-    const basePath = window.location.pathname.includes('/grade-manager/') ? '/grade-manager' : '';
-
     // Check if already authenticated
     const token = localStorage.getItem('gh_token');
     const userRole = localStorage.getItem('gh_role');
@@ -114,9 +111,9 @@
     if (token && userRole) {
       // Already logged in - redirect to appropriate dashboard
       if (userRole === 'teacher') {
-        window.location.href = `${basePath}/teacher/`;
+        window.location.href = '/grade-manager/teacher/';
       } else {
-        window.location.href = `${basePath}/student/dashboard.html`;
+        window.location.href = '/grade-manager/student/dashboard.html';
       }
     }
 

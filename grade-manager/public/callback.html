@@ -154,10 +154,10 @@
         // Redirect based on role
         if (orgRole === 'teacher') {
           statusEl.textContent = 'Добре дошли, преподавател!';
-          setTimeout(() => window.location.href = `${basePath}/teacher/`, 500);
+          setTimeout(() => window.location.href = '/grade-manager/teacher/', 500);
         } else {
           statusEl.textContent = 'Добре дошли, студент!';
-          setTimeout(() => window.location.href = `${basePath}/student/dashboard.html`, 500);
+          setTimeout(() => window.location.href = '/grade-manager/student/dashboard.html', 500);
         }
 
       } catch (error) {
