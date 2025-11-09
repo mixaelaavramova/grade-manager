@@ -176,9 +176,9 @@
       }
 
       try {
-        // Check if user is member of organization
+        // Use authenticated user's org membership endpoint
         const membershipResponse = await fetch(
-          `https://api.github.com/orgs/${CONFIG.GITHUB_CLASSROOM_ORG}/memberships/${username}`,
+          `https://api.github.com/user/memberships/orgs/${CONFIG.GITHUB_CLASSROOM_ORG}`,
           {
             headers: {
               'Authorization': `Bearer ${token}`,
@@ -188,13 +188,15 @@
         );
 
         if (!membershipResponse.ok) {
-          // Not a member of the organization
+          console.warn('Not a member of organization or API error:', await membershipResponse.text());
           return 'student';
         }
 
         const membership = await membershipResponse.json();
+        console.log('Organization membership:', membership);
 
-        // Check if user is owner or admin
+        // Check if user is admin (owner or admin role)
+        // GitHub returns 'admin' for both owners and admins
         if (membership.role === 'admin') {
           return 'teacher';
         }
@@ -203,7 +205,7 @@
         return 'student';
 
       } catch (error) {
-        console.warn('Failed to check organization role:', error);
+        console.error('Failed to check organization role:', error);
         // Default to student if check fails
         return 'student';
       }

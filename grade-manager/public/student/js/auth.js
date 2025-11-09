@@ -139,7 +139,8 @@ class Auth {
   // Logout
   logout() {
     this.clearAuth();
-    window.location.href = '/student/index.html';
+    const basePath = window.location.pathname.includes('/grade-manager/') ? '/grade-manager' : '';
+    window.location.href = `${basePath}/`;
   }
 }
 
@@ -147,7 +148,7 @@ class Auth {
 const auth = new Auth();
 
 // Login button handler (for index.html)
-if (window.location.pathname === '/student/' || window.location.pathname === '/student/index.html') {
+if (window.location.pathname.includes('/student/') && window.location.pathname.includes('index.html')) {
   window.addEventListener('DOMContentLoaded', () => {
     const loginBtn = document.getElementById('github-login');
     if (loginBtn) {
@@ -158,13 +159,14 @@ if (window.location.pathname === '/student/' || window.location.pathname === '/s
 
     // If already authenticated, redirect to dashboard
     if (auth.isAuthenticated()) {
-      window.location.href = '/student/dashboard.html';
+      const basePath = window.location.pathname.includes('/grade-manager/') ? '/grade-manager' : '';
+      window.location.href = `${basePath}/student/dashboard.html`;
     }
   });
 }
 
 // Logout button handler (for dashboard.html)
-if (window.location.pathname === '/student/dashboard.html') {
+if (window.location.pathname.includes('/student/dashboard.html')) {
   window.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.getElementById('logout');
     if (logoutBtn) {
