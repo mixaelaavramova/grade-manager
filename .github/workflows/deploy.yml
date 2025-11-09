@@ -31,19 +31,26 @@ jobs:
           cd grade-manager
           npm run build
 
-      - name: Copy static files to output
+      - name: Prepare deployment structure
         run: |
-          # Copy login, callback, and config to root of output
-          cp grade-manager/public/index.html grade-manager/out/
-          cp grade-manager/public/callback.html grade-manager/out/
-          cp grade-manager/public/config.js grade-manager/out/
-          # Copy student dashboard
-          cp -r grade-manager/public/student grade-manager/out/
+          # Create deployment directory
+          mkdir -p deploy-output/teacher
+
+          # Copy Next.js build output to /teacher subdirectory
+          cp -r grade-manager/out/* deploy-output/teacher/
+
+          # Copy static files to root
+          cp grade-manager/public/index.html deploy-output/
+          cp grade-manager/public/callback.html deploy-output/
+          cp grade-manager/public/config.js deploy-output/
+
+          # Copy student dashboard to root
+          cp -r grade-manager/public/student deploy-output/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: grade-manager/out
+          path: deploy-output
 
   deploy:
     environment:
