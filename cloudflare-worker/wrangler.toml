@@ -1,0 +1,20 @@
+# Cloudflare Workers Configuration
+# https://developers.cloudflare.com/workers/
+
+name = "github-classroom-oauth"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables (secrets)
+# Set these using: wrangler secret put GITHUB_CLIENT_ID
+# and: wrangler secret put GITHUB_CLIENT_SECRET
+#
+# DO NOT put actual values here! Use wrangler secrets.
+
+# Usage notes:
+# 1. Install Wrangler: npm install -g wrangler
+# 2. Login to Cloudflare: wrangler login
+# 3. Set secrets:
+#    wrangler secret put GITHUB_CLIENT_ID
+#    wrangler secret put GITHUB_CLIENT_SECRET
+# 4. Deploy: wrangler deploy

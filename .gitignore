@@ -1,0 +1,42 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Wrangler
+.wrangler/
+wrangler.toml.bak
+
+# Environment variables (if using .env)
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Temporary files
+*.log
+*.tmp
+.cache/
+
+# Build outputs (if you add build step later)
+dist/
+build/
+
+# Secrets (just in case)
+secrets.json
+config.local.js

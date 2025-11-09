@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моят Dashboard - GitHub Classroom</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <h1>📚 Classroom Dashboard</h1>
+      <div class="nav-right">
+        <div id="user-info" class="user-info"></div>
+        <button id="logout" class="btn-secondary">Изход</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Зареждане на данните...</p>
+    </div>
+
+    <div id="main-content" style="display: none;">
+      <section id="summary" class="summary-cards">
+        <div class="card summary-card">
+          <h3>📝 Общо задачи</h3>
+          <p class="stat" id="total-assignments">0</p>
+        </div>
+        <div class="card summary-card">
+          <h3>✅ Завършени</h3>
+          <p class="stat success" id="completed-assignments">0</p>
+        </div>
+        <div class="card summary-card">
+          <h3>⏳ В процес</h3>
+          <p class="stat warning" id="pending-assignments">0</p>
+        </div>
+        <div class="card summary-card">
+          <h3>❌ Неуспешни</h3>
+          <p class="stat error" id="failed-assignments">0</p>
+        </div>
+      </section>
+
+      <section id="assignments" class="section">
+        <h2>📝 Мои задачи</h2>
+        <div id="assignments-list" class="assignments-grid"></div>
+        <div id="no-assignments" class="empty-state" style="display: none;">
+          <p>Все още нямаш задачи от GitHub Classroom.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
