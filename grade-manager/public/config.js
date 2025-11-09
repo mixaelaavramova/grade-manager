@@ -17,7 +17,9 @@ const CONFIG = {
 
   // App URLs (автоматично се определят от window.location)
   get REDIRECT_URI() {
-    return `${window.location.origin}/callback.html`;
+    // GitHub Pages uses /grade-manager/ as base path
+    const basePath = window.location.pathname.includes('/grade-manager/') ? '/grade-manager' : '';
+    return `${window.location.origin}${basePath}/callback.html`;
   },
 
   get BASE_URL() {

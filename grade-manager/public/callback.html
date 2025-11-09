@@ -77,6 +77,9 @@
 
   <script src="config.js"></script>
   <script>
+    // Get base path for GitHub Pages
+    const basePath = window.location.pathname.includes('/grade-manager/') ? '/grade-manager' : '';
+
     const statusEl = document.getElementById('status');
     const errorEl = document.getElementById('error');
 
@@ -151,17 +154,17 @@
         // Redirect based on role
         if (orgRole === 'teacher') {
           statusEl.textContent = 'Добре дошли, преподавател!';
-          setTimeout(() => window.location.href = '/teacher/', 500);
+          setTimeout(() => window.location.href = `${basePath}/teacher/`, 500);
         } else {
           statusEl.textContent = 'Добре дошли, студент!';
-          setTimeout(() => window.location.href = '/student/dashboard.html', 500);
+          setTimeout(() => window.location.href = `${basePath}/student/dashboard.html`, 500);
         }
 
       } catch (error) {
         console.error('Auth error:', error);
         showError(error.message);
         setTimeout(() => {
-          window.location.href = '/';
+          window.location.href = `${basePath}/`;
         }, 3000);
       }
     }
