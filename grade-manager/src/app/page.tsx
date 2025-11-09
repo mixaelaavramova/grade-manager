@@ -19,6 +19,61 @@ interface StudentSummary {
   hasPassed: boolean;
 }
 
+// CS50 assignment requirements
+const CS50_REQUIREMENTS = {
+  // Must complete ALL of these
+  required: ['hello'],
+  
+  // Must complete at least ONE from EACH group
+  choiceGroups: [
+    ['mario-less', 'mario-more'],
+    ['cash', 'credit'],
+    ['caesar', 'substitution'],
+    ['filter-less', 'filter-more'],
+    ['runoff', 'tideman'],
+  ],
+  
+  // Additional required (when CSVs are uploaded)
+  additionalRequired: [
+    'scrabble',
+    'readability',
+    'sort',
+    'plurality',
+    'volume',
+    'recover',
+    'inheritance',
+    'speller'
+  ]
+};
+
+// Check if student has passed based on CS50 requirements
+function checkStudentPass(studentAssignments: { [key: string]: { points: number; maxPoints: number } }): boolean {
+  const completedAssignments = Object.keys(studentAssignments).filter(
+    assignment => {
+      const grade = studentAssignments[assignment];
+      return grade.points === grade.maxPoints && grade.maxPoints > 0;
+    }
+  );
+
+  // Check all required assignments
+  const allRequired = [...CS50_REQUIREMENTS.required, ...CS50_REQUIREMENTS.additionalRequired];
+  for (const required of allRequired) {
+    if (!completedAssignments.includes(required)) {
+      return false;
+    }
+  }
+
+  // Check that at least one from each choice group is completed
+  for (const group of CS50_REQUIREMENTS.choiceGroups) {
+    const hasOneFromGroup = group.some(assignment => completedAssignments.includes(assignment));
+    if (!hasOneFromGroup) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 export default function GradeManager() {
   const [students, setStudents] = useState<{ [studentName: string]: StudentSummary }>({});
   const [assignments, setAssignments] = useState<string[]>([]);
@@ -91,8 +146,9 @@ export default function GradeManager() {
             sum + student.assignments[key].maxPoints, 0);
           
           student.totalPercentage = totalPossible > 0 ? (totalEarned / totalPossible) * 100 : 0;
-          student.hasPassed = assignmentKeys.every(key => 
-            student.assignments[key].points === student.assignments[key].maxPoints);
+          
+          // Check if student passed based on CS50 requirements
+          student.hasPassed = checkStudentPass(student.assignments);
         }
       });
 
@@ -135,7 +191,7 @@ export default function GradeManager() {
 
   // Calculate statistics
   const totalStudents = studentList.length;
-  const perfectStudents = studentList.filter(s => s.hasPassed).length;
+  const passedStudents = studentList.filter(s => s.hasPassed).length;
   const overallAverage = totalStudents > 0
     ? studentList.reduce((sum, s) => sum + s.totalPercentage, 0) / totalStudents
     : 0;
@@ -262,8 +318,10 @@ export default function GradeManager() {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
-                        {student.hasPassed && (
+                        {student.hasPassed ? (
                           <span className="text-green-600 text-xl">✓</span>
+                        ) : (
+                          <span className="text-red-600 text-xl">✗</span>
                         )}
                       </td>
                     </tr>
@@ -276,9 +334,9 @@ export default function GradeManager() {
               <div className="space-y-3">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="bg-white p-3 rounded shadow-sm">
-                    <div className="text-gray-500 text-xs uppercase">Perfect Students</div>
+                    <div className="text-gray-500 text-xs uppercase">Students Passed</div>
                     <div className="text-lg font-bold text-green-600">
-                      🎯 {perfectStudents}/{totalStudents} ({((perfectStudents / totalStudents) * 100).toFixed(1)}%)
+                      🎯 {passedStudents}/{totalStudents} ({totalStudents > 0 ? ((passedStudents / totalStudents) * 100).toFixed(1) : 0}%)
                     </div>
                   </div>
                   <div className="bg-white p-3 rounded shadow-sm">
