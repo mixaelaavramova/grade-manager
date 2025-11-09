@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Classroom - Вход</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-container {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .login-btn {
+      background: #24292e;
+      color: white;
+      border: none;
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+
+    .login-btn:hover {
+      background: #2f363d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .login-btn:active {
+      transform: translateY(0);
+    }
+
+    .info {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #f6f8fa;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      color: #586069;
+      line-height: 1.5;
+    }
+
+    .info strong {
+      color: #24292e;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>📚 GitHub Classroom</h1>
+    <p class="subtitle">Управление на оценки и задачи</p>
+
+    <button id="github-login" class="login-btn">
+      <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+      Влез с GitHub
+    </button>
+
+    <div class="info">
+      <strong>Автоматично определяне на роля:</strong><br>
+      Owner/Admin на организацията → Преподавател<br>
+      Всички други → Студент
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script>
+    // Check if already authenticated
+    const token = localStorage.getItem('gh_token');
+    const userRole = localStorage.getItem('gh_role');
+
+    if (token && userRole) {
+      // Already logged in - redirect to appropriate dashboard
+      if (userRole === 'teacher') {
+        window.location.href = '/teacher/';
+      } else {
+        window.location.href = '/student/dashboard.html';
+      }
+    }
+
+    // Login button handler
+    document.getElementById('github-login').addEventListener('click', () => {
+      const clientId = CONFIG.GITHUB_CLIENT_ID;
+      const redirectUri = CONFIG.REDIRECT_URI;
+      const scope = 'read:user read:org repo';
+
+      // Generate random state for CSRF protection
+      const state = Math.random().toString(36).substring(2, 15) +
+                   Math.random().toString(36).substring(2, 15);
+      sessionStorage.setItem('oauth_state', state);
+
+      const authUrl = `https://github.com/login/oauth/authorize?` +
+        `client_id=${clientId}&` +
+        `redirect_uri=${encodeURIComponent(redirectUri)}&` +
+        `scope=${encodeURIComponent(scope)}&` +
+        `state=${state}`;
+
+      window.location.href = authUrl;
+    });
+  </script>
+</body>
+</html>

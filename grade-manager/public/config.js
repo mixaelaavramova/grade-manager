@@ -8,17 +8,16 @@ const CONFIG = {
   // URL на Cloudflare Worker за token exchange
   OAUTH_PROXY_URL: 'https://github-classroom-oauth.m-avramova.workers.dev/auth',
 
-  // GitHub Organization
-  // Филтрира само repos от тази organization
+  // GitHub Organization (ЗАДЪЛЖИТЕЛНО за role detection)
+  // Организацията в която owner/admin = преподавател, member = студент
   GITHUB_CLASSROOM_ORG: 'nvnacs50',
 
   // Repo naming pattern за GitHub Classroom assignments
-  // Обикновено GitHub Classroom създава repos с pattern: assignment-name-username
   ASSIGNMENT_REPO_PATTERN: /^(?!.*-simple$).*$/, // Exclude repos ending with -simple
 
   // App URLs (автоматично се определят от window.location)
   get REDIRECT_URI() {
-    return `${window.location.origin}/student/dashboard.html`;
+    return `${window.location.origin}/callback.html`;
   },
 
   get BASE_URL() {
