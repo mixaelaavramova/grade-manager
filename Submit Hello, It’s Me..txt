@@ -1,0 +1,42 @@
+Submit Hello, It’s Me.
+Submit one of:
+this version of Mario, if feeling less comfortable
+this version of Mario, if feeling more comfortable
+Submit one of:
+Cash, if feeling less comfortable
+Credit, if feeling more comfortable
+
+
+Submit Scrabble
+Submit Readability
+Submit one of:
+Caesar, if feeling less comfortable
+Substitution, if feeling more comfortable
+If you submit both Caesar and Substitution, we’ll record the high
+
+
+Submit Sort
+Submit Plurality
+Submit one of:
+Runoff, if feeling more or less comfortable
+Tideman, if feeling very, very, very comfortable
+
+
+Submit Volume
+Submit one of:
+this version of Filter if feeling less comfortable
+this version of Filter if feeling more comfortable
+Submit Recover
+
+
+Submit Inheritance
+Submit Speller
+
+
+Client id: Ov23liKzqluGpPURDE5f
+Client secret: cb7349150d6e83250db08c57e273188593decdfa
+
+
+
+Ov23li88GTM0e75wAX9p
+688f7f20af4cb7246a422f61c8ccf2f940138ac3
