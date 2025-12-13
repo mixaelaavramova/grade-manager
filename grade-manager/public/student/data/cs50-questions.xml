@@ -1,0 +1,2761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+<!-- ========================================
+     C BASICS (30 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>C Basics 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв е правилният начин да декларирате integer променлива в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>int x;</text></answer>
+  <answer fraction="0"><text>integer x;</text></answer>
+  <answer fraction="0"><text>var x;</text></answer>
+  <answer fraction="0"><text>x: int;</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Колко bytes заема int на повечето системи?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>1 byte</text></answer>
+  <answer fraction="0"><text>2 bytes</text></answer>
+  <answer fraction="100"><text>4 bytes</text></answer>
+  <answer fraction="0"><text>8 bytes</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще отпечата printf("%d", 5 / 2);?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>2</text></answer>
+  <answer fraction="0"><text>2.5</text></answer>
+  <answer fraction="0"><text>3</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой format specifier използвате за float в printf?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>%d</text></answer>
+  <answer fraction="100"><text>%f</text></answer>
+  <answer fraction="0"><text>%s</text></answer>
+  <answer fraction="0"><text>%c</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави операторът % в C?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Деление</text></answer>
+  <answer fraction="100"><text>Остатък от деление (modulo)</text></answer>
+  <answer fraction="0"><text>Процент</text></answer>
+  <answer fraction="0"><text>Коментар</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как декларирате константа в C?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>constant int x = 10;</text></answer>
+  <answer fraction="100"><text>const int x = 10;</text></answer>
+  <answer fraction="0"><text>final int x = 10;</text></answer>
+  <answer fraction="0"><text>readonly int x = 10;</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава '\n' в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Нов ред (newline)</text></answer>
+  <answer fraction="0"><text>Null character</text></answer>
+  <answer fraction="0"><text>Tab</text></answer>
+  <answer fraction="0"><text>Backslash</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой е правилният начин да декларирате char променлива?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>char c = 'A';</text></answer>
+  <answer fraction="0"><text>char c = "A";</text></answer>
+  <answer fraction="0"><text>character c = 'A';</text></answer>
+  <answer fraction="0"><text>chr c = 'A';</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще се случи с int x; без да я инициализирате?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>x е автоматично 0</text></answer>
+  <answer fraction="100"><text>x има garbage value (неопределена стойност)</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <answer fraction="0"><text>x е NULL</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как се казва главната функция в C програма?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>main</text></answer>
+  <answer fraction="0"><text>start</text></answer>
+  <answer fraction="0"><text>begin</text></answer>
+  <answer fraction="0"><text>program</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е разликата между i++ и ++i?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>i++ връща старата стойност, ++i връща новата</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>i++ е по-бързо</text></answer>
+  <answer fraction="0"><text>++i не съществува в C</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв тип данни е 'A' в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>char</text></answer>
+  <answer fraction="0"><text>string</text></answer>
+  <answer fraction="0"><text>int</text></answer>
+  <answer fraction="0"><text>character</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави оператора && в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Логическо AND</text></answer>
+  <answer fraction="0"><text>Адрес на променлива</text></answer>
+  <answer fraction="0"><text>Bitwise AND</text></answer>
+  <answer fraction="0"><text>Конкатенация</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава == в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Сравнение за равенство</text></answer>
+  <answer fraction="0"><text>Присвояване</text></answer>
+  <answer fraction="0"><text>Декларация</text></answer>
+  <answer fraction="0"><text>Strict equality</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как правите коментар на един ред в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>// This is a comment</text></answer>
+  <answer fraction="0"><text># This is a comment</text></answer>
+  <answer fraction="0"><text><!-- This is a comment --></text></answer>
+  <answer fraction="0"><text>' This is a comment</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 16</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Колко bytes заема char?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>1 byte</text></answer>
+  <answer fraction="0"><text>2 bytes</text></answer>
+  <answer fraction="0"><text>4 bytes</text></answer>
+  <answer fraction="0"><text>Зависи от системата</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 17</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще върне израза 5 > 3?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>1 (true)</text></answer>
+  <answer fraction="0"><text>0 (false)</text></answer>
+  <answer fraction="0"><text>true</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 18</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кое е валидно име на променлива в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>_count</text></answer>
+  <answer fraction="0"><text>2count</text></answer>
+  <answer fraction="0"><text>count-2</text></answer>
+  <answer fraction="0"><text>int</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 19</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави break statement в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Излиза от цикъл или switch</text></answer>
+  <answer fraction="0"><text>Прекратява програмата</text></answer>
+  <answer fraction="0"><text>Pause изпълнението</text></answer>
+  <answer fraction="0"><text>Създава debug точка</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 20</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави continue statement?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Пропуска останалата част от текущата итерация</text></answer>
+  <answer fraction="0"><text>Излиза от цикъл-а</text></answer>
+  <answer fraction="0"><text>Продължава програмата след пауза</text></answer>
+  <answer fraction="0"><text>Връща към началото на функцията</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 21</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв е резултата от 10 % 3?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>1</text></answer>
+  <answer fraction="0"><text>3</text></answer>
+  <answer fraction="0"><text>3.33</text></answer>
+  <answer fraction="0"><text>0</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 22</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв тип данни трябва да връща main()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>int</text></answer>
+  <answer fraction="0"><text>void</text></answer>
+  <answer fraction="0"><text>char</text></answer>
+  <answer fraction="0"><text>Без значение</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 23</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава return 0; в main()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Успешно изпълнение на програмата</text></answer>
+  <answer fraction="0"><text>Грешка</text></answer>
+  <answer fraction="0"><text>Програмата е празна</text></answer>
+  <answer fraction="0"><text>Нула резултати</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 24</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой е правилният синтаксис за if statement?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>if (condition) { }</text></answer>
+  <answer fraction="0"><text>if condition { }</text></answer>
+  <answer fraction="0"><text>if (condition) then { }</text></answer>
+  <answer fraction="0"><text>if [condition] { }</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 25</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава NULL в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer към нищо (0 адрес)</text></answer>
+  <answer fraction="0"><text>Празен string</text></answer>
+  <answer fraction="0"><text>Нула</text></answer>
+  <answer fraction="0"><text>Undefined</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 26</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв е default return value на функция без return?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Garbage value (неопределено)</text></answer>
+  <answer fraction="0"><text>0</text></answer>
+  <answer fraction="0"><text>NULL</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 27</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Колко е максималната стойност на unsigned char?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>127</text></answer>
+  <answer fraction="100"><text>255</text></answer>
+  <answer fraction="0"><text>256</text></answer>
+  <answer fraction="0"><text>65535</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 28</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е истина за bool тип в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Трябва да включите <stdbool.h></text></answer>
+  <answer fraction="0"><text>Вграден е в C по default</text></answer>
+  <answer fraction="0"><text>Не съществува в C</text></answer>
+  <answer fraction="0"><text>bool е keyword без header</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 29</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави sizeof() оператора?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Връща размера на тип или променлива в bytes</text></answer>
+  <answer fraction="0"><text>Връща дължината на string</text></answer>
+  <answer fraction="0"><text>Проверява дали променливата съществува</text></answer>
+  <answer fraction="0"><text>Връща броя елементи в масив</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>C Basics 30</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е разликата между = и ==?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>= присвоява, == сравнява</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>= е строго равенство, == е loose</text></answer>
+  <answer fraction="0"><text>= за числа, == за strings</text></answer>
+  <tags><tag><text>c-basics</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<!-- ========================================
+     FUNCTIONS & SCOPE (20 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Functions 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е function prototype в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Декларация на функция преди нейната имплементация</text></answer>
+  <answer fraction="0"><text>Първата функция в програмата</text></answer>
+  <answer fraction="0"><text>Шаблон за създаване на функции</text></answer>
+  <answer fraction="0"><text>Функция без тяло</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава void като return type?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Функцията не връща стойност</text></answer>
+  <answer fraction="0"><text>Функцията връща NULL</text></answer>
+  <answer fraction="0"><text>Функцията връща 0</text></answer>
+  <answer fraction="0"><text>Грешка в кода</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е scope на локална променлива?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Само във функцията където е декларирана</text></answer>
+  <answer fraction="0"><text>В цялата програма</text></answer>
+  <answer fraction="0"><text>В текущия файл</text></answer>
+  <answer fraction="0"><text>До края на програмата</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как се предават параметри на функция в C по default?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>By value (копие на стойността)</text></answer>
+  <answer fraction="0"><text>By reference (адреса)</text></answer>
+  <answer fraction="0"><text>By pointer</text></answer>
+  <answer fraction="0"><text>Зависи от типа</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е recursion?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Функция която извиква себе си</text></answer>
+  <answer fraction="0"><text>Цикъл в функция</text></answer>
+  <answer fraction="0"><text>Вложени функции</text></answer>
+  <answer fraction="0"><text>Функция без return</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво се случва ако не добавите return в non-void функция?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Undefined behavior (може да даде предупреждение)</text></answer>
+  <answer fraction="0"><text>Автоматично връща 0</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <answer fraction="0"><text>Връща NULL</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава static keyword пред локална променлива?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Запазва стойността си между извиквания</text></answer>
+  <answer fraction="0"><text>Не може да се променя</text></answer>
+  <answer fraction="0"><text>Глобална променлива</text></answer>
+  <answer fraction="0"><text>Константа</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой header файл съдържа printf?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>stdio.h</text></answer>
+  <answer fraction="0"><text>stdlib.h</text></answer>
+  <answer fraction="0"><text>string.h</text></answer>
+  <answer fraction="0"><text>io.h</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли функция да връща масив директно?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, с return arr;</text></answer>
+  <answer fraction="100"><text>Не, но може pointer към масив</text></answer>
+  <answer fraction="0"><text>Да, но само static масиви</text></answer>
+  <answer fraction="0"><text>Да, без ограничения</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е argc в int main(int argc, char *argv[])?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Брой command-line аргументи</text></answer>
+  <answer fraction="0"><text>Масив от аргументи</text></answer>
+  <answer fraction="0"><text>ASCII код</text></answer>
+  <answer fraction="0"><text>Argument count variable</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е inline function в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Hint за компилатора да вмъкне кода директно</text></answer>
+  <answer fraction="0"><text>Функция написана на един ред</text></answer>
+  <answer fraction="0"><text>Функция в header file</text></answer>
+  <answer fraction="0"><text>Анонимна функция</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Коя функция използвате за динамична памет в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>malloc()</text></answer>
+  <answer fraction="0"><text>alloc()</text></answer>
+  <answer fraction="0"><text>new()</text></answer>
+  <answer fraction="0"><text>create()</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква функция освобождава динамично алокирана памет?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>free()</text></answer>
+  <answer fraction="0"><text>delete()</text></answer>
+  <answer fraction="0"><text>release()</text></answer>
+  <answer fraction="0"><text>dealloc()</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави strlen() функцията?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Връща дължината на string (без null terminator)</text></answer>
+  <answer fraction="0"><text>Връща размера в bytes</text></answer>
+  <answer fraction="0"><text>Броят символи включително \0</text></answer>
+  <answer fraction="0"><text>Проверява дали string е валиден</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[В кой header е strlen()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>string.h</text></answer>
+  <answer fraction="0"><text>stdio.h</text></answer>
+  <answer fraction="0"><text>stdlib.h</text></answer>
+  <answer fraction="0"><text>str.h</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 16</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да имате две функции с еднакво име?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, винаги</text></answer>
+  <answer fraction="100"><text>Не, C не поддържа function overloading</text></answer>
+  <answer fraction="0"><text>Да, ако са с различен return type</text></answer>
+  <answer fraction="0"><text>Да, ако са в различни файлове</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 17</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава extern keyword?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Декларира променлива/функция дефинирана другаде</text></answer>
+  <answer fraction="0"><text>Външна библиотека</text></answer>
+  <answer fraction="0"><text>Експортира функцията</text></answer>
+  <answer fraction="0"><text>Глобална константа</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 18</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква функция копира strings в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>strcpy()</text></answer>
+  <answer fraction="0"><text>copy()</text></answer>
+  <answer fraction="0"><text>strdup()</text></answer>
+  <answer fraction="0"><text>memcpy()</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 19</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е variadic function?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Функция с променлив брой параметри (като printf)</text></answer>
+  <answer fraction="0"><text>Функция с много параметри</text></answer>
+  <answer fraction="0"><text>Функция с различни типове параметри</text></answer>
+  <answer fraction="0"><text>Функция която варира резултата</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Functions 20</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Къде се съхраняват локални променливи?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>В stack паметта</text></answer>
+  <answer fraction="0"><text>В heap паметта</text></answer>
+  <answer fraction="0"><text>В глобалната област</text></answer>
+  <answer fraction="0"><text>В registers</text></answer>
+  <tags><tag><text>functions</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- ========================================
+     ARRAYS & STRINGS (30 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Масиви 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как декларирате масив с 5 integers?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>int arr[5];</text></answer>
+  <answer fraction="0"><text>int arr(5);</text></answer>
+  <answer fraction="0"><text>масив arr[5];</text></answer>
+  <answer fraction="0"><text>int[5] arr;</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв е индекса на първия елемент в масив?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>0</text></answer>
+  <answer fraction="0"><text>1</text></answer>
+  <answer fraction="0"><text>-1</text></answer>
+  <answer fraction="0"><text>Зависи от декларацията</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как се завършват strings в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>С null character '\0'</text></answer>
+  <answer fraction="0"><text>С '\n'</text></answer>
+  <answer fraction="0"><text>С EOF</text></answer>
+  <answer fraction="0"><text>Автоматично с размера</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е дължината на string "Hello"?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>5</text></answer>
+  <answer fraction="0"><text>6 (включително '\0')</text></answer>
+  <answer fraction="0"><text>4</text></answer>
+  <answer fraction="0"><text>Зависи от системата</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Колко bytes заема "Hello" в паметта?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>6 bytes (5 chars + '\0')</text></answer>
+  <answer fraction="0"><text>5 bytes</text></answer>
+  <answer fraction="0"><text>10 bytes</text></answer>
+  <answer fraction="0"><text>Зависи от типа char</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е разликата между char s[] и char *s?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>char s[] е масив, char *s е pointer</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>char *s е за константни strings</text></answer>
+  <answer fraction="0"><text>char s[] е по-бавно</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как инициализирате масив със стойности?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>int arr[] = {1, 2, 3};</text></answer>
+  <answer fraction="0"><text>int arr[] = (1, 2, 3);</text></answer>
+  <answer fraction="0"><text>int arr[3] = 1, 2, 3;</text></answer>
+  <answer fraction="0"><text>int arr = {1, 2, 3};</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво се случва при достъп извън границите на масив?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Undefined behavior (може segmentation fault)</text></answer>
+  <answer fraction="0"><text>Компилаторът дава грешка</text></answer>
+  <answer fraction="0"><text>Връща NULL</text></answer>
+  <answer fraction="0"><text>Автоматично wrap around</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави strcmp(s1, s2)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Сравнява два strings лексикографски</text></answer>
+  <answer fraction="0"><text>Копира s2 в s1</text></answer>
+  <answer fraction="0"><text>Конкатенира s1 и s2</text></answer>
+  <answer fraction="0"><text>Проверява дали s1 е по-дълъг</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво връща strcmp ако strings са равни?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>0</text></answer>
+  <answer fraction="0"><text>1</text></answer>
+  <answer fraction="0"><text>true</text></answer>
+  <answer fraction="0"><text>-1</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да копирате масив с =?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, винаги</text></answer>
+  <answer fraction="100"><text>Не, трябва цикъл или memcpy</text></answer>
+  <answer fraction="0"><text>Да, но само int масиви</text></answer>
+  <answer fraction="0"><text>Да, ако са еднакъв размер</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е multidimensional масив?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Масив от масиви (например матрица)</text></answer>
+  <answer fraction="0"><text>Масив с множество типове данни</text></answer>
+  <answer fraction="0"><text>Масив с променлив размер</text></answer>
+  <answer fraction="0"><text>Масив разпределен в heap</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как декларирате 2D масив 3x4?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>int arr[3][4];</text></answer>
+  <answer fraction="0"><text>int arr[3,4];</text></answer>
+  <answer fraction="0"><text>int arr[3*4];</text></answer>
+  <answer fraction="0"><text>int[3][4] arr;</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави strcat(s1, s2)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Добавя s2 в края на s1</text></answer>
+  <answer fraction="0"><text>Сравнява s1 и s2</text></answer>
+  <answer fraction="0"><text>Копира s2 в s1</text></answer>
+  <answer fraction="0"><text>Създава нов string от s1 + s2</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо е опасно strcpy без проверка?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Може да причини buffer overflow</text></answer>
+  <answer fraction="0"><text>Бавно е</text></answer>
+  <answer fraction="0"><text>Не работи с Unicode</text></answer>
+  <answer fraction="0"><text>Изтрива източника</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 16</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е по-сигурната алтернатива на strcpy?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>strncpy (с размер лимит)</text></answer>
+  <answer fraction="0"><text>memcpy</text></answer>
+  <answer fraction="0"><text>safecopy</text></answer>
+  <answer fraction="0"><text>strcpy_safe</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 17</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава char *argv[] в main?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Масив от strings (command-line args)</text></answer>
+  <answer fraction="0"><text>Pointer към char</text></answer>
+  <answer fraction="0"><text>Масив от chars</text></answer>
+  <answer fraction="0"><text>String променлива</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 18</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как достъпвате третия command-line аргумент?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>argv[2]</text></answer>
+  <answer fraction="0"><text>argv[3]</text></answer>
+  <answer fraction="0"><text>args[2]</text></answer>
+  <answer fraction="0"><text>argv[1]</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 19</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е argv[0]?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Името на програмата</text></answer>
+  <answer fraction="0"><text>Първият аргумент</text></answer>
+  <answer fraction="0"><text>Броят аргументи</text></answer>
+  <answer fraction="0"><text>NULL pointer</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 20</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави toupper() функцията?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Конвертира char към главна буква</text></answer>
+  <answer fraction="0"><text>Конвертира string към главни букви</text></answer>
+  <answer fraction="0"><text>Проверява дали е главна буква</text></answer>
+  <answer fraction="0"><text>Премахва главни букви</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 21</text></name>
+  <questiontext format="html">
+    <text><![CDATA[В кой header е toupper()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>ctype.h</text></answer>
+  <answer fraction="0"><text>string.h</text></answer>
+  <answer fraction="0"><text>stdio.h</text></answer>
+  <answer fraction="0"><text>char.h</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 22</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е buffer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Временна област в паметта за данни</text></answer>
+  <answer fraction="0"><text>Тип променлива</text></answer>
+  <answer fraction="0"><text>Функция за четене</text></answer>
+  <answer fraction="0"><text>Cache памет</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 23</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава масив decay?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Масив се конвертира към pointer</text></answer>
+  <answer fraction="0"><text>Масив губи стойности</text></answer>
+  <answer fraction="0"><text>Масив се изтрива</text></answer>
+  <answer fraction="0"><text>Масив намалява размер</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 24</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да намерите размера на масив предаден на функция?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, със sizeof</text></answer>
+  <answer fraction="100"><text>Не, заради масив decay</text></answer>
+  <answer fraction="0"><text>Да, с strlen</text></answer>
+  <answer fraction="0"><text>Да, с length()</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 25</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави memset(arr, 0, size)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Запълва паметта с нули</text></answer>
+  <answer fraction="0"><text>Изчиства паметта</text></answer>
+  <answer fraction="0"><text>Проверява за нули</text></answer>
+  <answer fraction="0"><text>Задава размер на масив</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 26</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е string literal?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Константен string в кода ("Hello")</text></answer>
+  <answer fraction="0"><text>String променлива</text></answer>
+  <answer fraction="0"><text>Char масив</text></answer>
+  <answer fraction="0"><text>Escape sequence</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 27</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да променяте string literal?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, винаги</text></answer>
+  <answer fraction="100"><text>Не, това е undefined behavior</text></answer>
+  <answer fraction="0"><text>Да, ако е char*</text></answer>
+  <answer fraction="0"><text>Зависи от компилатора</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 28</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави isdigit() функцията?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Проверява дали char е цифра (0-9)</text></answer>
+  <answer fraction="0"><text>Конвертира char към число</text></answer>
+  <answer fraction="0"><text>Проверява дали е число</text></answer>
+  <answer fraction="0"><text>Връща числовата стойност</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 29</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави isalpha()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Проверява дали char е буква</text></answer>
+  <answer fraction="0"><text>Проверява дали е alfanumeric</text></answer>
+  <answer fraction="0"><text>Конвертира към азбука</text></answer>
+  <answer fraction="0"><text>Сортира по азбука</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Масиви 30</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как конвертирате string към int?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>atoi() функция</text></answer>
+  <answer fraction="0"><text>int() cast</text></answer>
+  <answer fraction="0"><text>parse()</text></answer>
+  <answer fraction="0"><text>strtoint()</text></answer>
+  <tags><tag><text>масиви</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- ========================================
+     POINTERS & MEMORY (40 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Pointers 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е pointer в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Променлива която съхранява адрес в паметта</text></answer>
+  <answer fraction="0"><text>Указател към файл</text></answer>
+  <answer fraction="0"><text>Индекс в масив</text></answer>
+  <answer fraction="0"><text>Референция към функция</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как декларирате pointer към int?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>int *p;</text></answer>
+  <answer fraction="0"><text>int p*;</text></answer>
+  <answer fraction="0"><text>pointer int p;</text></answer>
+  <answer fraction="0"><text>int &p;</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави & оператора?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Взима адреса на променлива</text></answer>
+  <answer fraction="0"><text>Dereference pointer</text></answer>
+  <answer fraction="0"><text>Bitwise AND</text></answer>
+  <answer fraction="0"><text>Логическо AND</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави * оператора (в контекст на pointers)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Dereference - взима стойността на адреса</text></answer>
+  <answer fraction="0"><text>Взима адрес</text></answer>
+  <answer fraction="0"><text>Умножение</text></answer>
+  <answer fraction="0"><text>Pointer declaration</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е NULL pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer който не сочи към валиден адрес</text></answer>
+  <answer fraction="0"><text>Pointer със стойност 0</text></answer>
+  <answer fraction="0"><text>Празен pointer</text></answer>
+  <answer fraction="0"><text>Pointer без тип</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави malloc()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Алокира динамична памет в heap</text></answer>
+  <answer fraction="0"><text>Освобождава памет</text></answer>
+  <answer fraction="0"><text>Алокира памет в stack</text></answer>
+  <answer fraction="0"><text>Проверява налична памет</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[В кой header е malloc?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>stdlib.h</text></answer>
+  <answer fraction="0"><text>stdio.h</text></answer>
+  <answer fraction="0"><text>malloc.h</text></answer>
+  <answer fraction="0"><text>memory.h</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво връща malloc при неуспех?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>NULL</text></answer>
+  <answer fraction="0"><text>0</text></answer>
+  <answer fraction="0"><text>-1</text></answer>
+  <answer fraction="0"><text>Exception</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави free()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Освобождава динамично алокирана памет</text></answer>
+  <answer fraction="0"><text>Изчиства променлива</text></answer>
+  <answer fraction="0"><text>Нулира pointer</text></answer>
+  <answer fraction="0"><text>Проверява за memory leaks</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е memory leak?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Алокирана памет която не е освободена</text></answer>
+  <answer fraction="0"><text>Pointer без стойност</text></answer>
+  <answer fraction="0"><text>Buffer overflow</text></answer>
+  <answer fraction="0"><text>Segmentation fault</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е dangling pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer към освободена памет</text></answer>
+  <answer fraction="0"><text>NULL pointer</text></answer>
+  <answer fraction="0"><text>Wild pointer</text></answer>
+  <answer fraction="0"><text>Pointer без декларация</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е segmentation fault?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Достъп до невалиден memory адрес</text></answer>
+  <answer fraction="0"><text>Memory leak</text></answer>
+  <answer fraction="0"><text>Stack overflow</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между stack и heap?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Stack е автоматичен, heap е динамичен</text></answer>
+  <answer fraction="0"><text>Stack е по-бавен</text></answer>
+  <answer fraction="0"><text>Heap е по-малък</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави calloc()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Алокира памет и я нулира</text></answer>
+  <answer fraction="0"><text>Само алокира памет</text></answer>
+  <answer fraction="0"><text>Освобождава памет</text></answer>
+  <answer fraction="0"><text>Пренулира памет</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между malloc и calloc?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>calloc нулира паметта, malloc не</text></answer>
+  <answer fraction="0"><text>malloc е по-бързо</text></answer>
+  <answer fraction="0"><text>calloc е deprecated</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 16</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави realloc()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Променя размера на алокирана памет</text></answer>
+  <answer fraction="0"><text>Освобождава памет</text></answer>
+  <answer fraction="0"><text>Алокира нова памет</text></answer>
+  <answer fraction="0"><text>Копира памет</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 17</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е pointer arithmetic?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Операции с адреси (p++, p+5, etc.)</text></answer>
+  <answer fraction="0"><text>Математически операции с pointers</text></answer>
+  <answer fraction="0"><text>Операции с стойности</text></answer>
+  <answer fraction="0"><text>Битови операции</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 18</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава p++ за pointer p?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Премества p към следващия елемент</text></answer>
+  <answer fraction="0"><text>Увеличава стойността с 1</text></answer>
+  <answer fraction="0"><text>Увеличава адреса с 1 byte</text></answer>
+  <answer fraction="0"><text>Дава грешка</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 19</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е double pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer към pointer (int **p)</text></answer>
+  <answer fraction="0"><text>Два pointers</text></answer>
+  <answer fraction="0"><text>Pointer с double стойност</text></answer>
+  <answer fraction="0"><text>64-bit pointer</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 20</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е void pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer без конкретен тип (void *)</text></answer>
+  <answer fraction="0"><text>NULL pointer</text></answer>
+  <answer fraction="0"><text>Празен pointer</text></answer>
+  <answer fraction="0"><text>Pointer към void функция</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 21</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да правите arithmetic с void pointer?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, винаги</text></answer>
+  <answer fraction="100"><text>Не, трябва да го cast-нете първо</text></answer>
+  <answer fraction="0"><text>Да, но само ++/--</text></answer>
+  <answer fraction="0"><text>Зависи от компилатора</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 22</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Колко bytes заема pointer (на 64-bit система)?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>4 bytes</text></answer>
+  <answer fraction="100"><text>8 bytes</text></answer>
+  <answer fraction="0"><text>Зависи от типа</text></answer>
+  <answer fraction="0"><text>16 bytes</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 23</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е const pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer който не може да променя адреса си</text></answer>
+  <answer fraction="0"><text>Pointer към константа</text></answer>
+  <answer fraction="0"><text>NULL pointer</text></answer>
+  <answer fraction="0"><text>Pointer който не може да се dereference</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 24</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между const int *p и int *const p?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Първият не може да мени стойността, вторият адреса</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>Първият е по-бърз</text></answer>
+  <answer fraction="0"><text>Вторият не съществува</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 25</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е function pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer към функция</text></answer>
+  <answer fraction="0"><text>Функция която връща pointer</text></answer>
+  <answer fraction="0"><text>Pointer в функция</text></answer>
+  <answer fraction="0"><text>Указател към параметър</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 26</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е buffer overflow?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Запис извън границите на allocated памет</text></answer>
+  <answer fraction="0"><text>Препълване на buffer променлива</text></answer>
+  <answer fraction="0"><text>Memory leak</text></answer>
+  <answer fraction="0"><text>Stack overflow</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 27</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо е опасен buffer overflow?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Може да се използва за security exploit</text></answer>
+  <answer fraction="0"><text>Само прави програмата бавна</text></answer>
+  <answer fraction="0"><text>Само предупреждение при компилиране</text></answer>
+  <answer fraction="0"><text>Винаги се игнорира</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 28</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави memcpy()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Копира байтове от един адрес в друг</text></answer>
+  <answer fraction="0"><text>Копира string</text></answer>
+  <answer fraction="0"><text>Алокира памет</text></answer>
+  <answer fraction="0"><text>Сравнява памет</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 29</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между memcpy и memmove?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>memmove работи правилно при overlapping памет</text></answer>
+  <answer fraction="0"><text>memcpy е по-бързо винаги</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>memmove е deprecated</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 30</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава arrow operator (->) в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Достъп до член чрез pointer (p->x вместо (*p).x)</text></answer>
+  <answer fraction="0"><text>Pointer assignment</text></answer>
+  <answer fraction="0"><text>Return statement</text></answer>
+  <answer fraction="0"><text>Lambda функция</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 31</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е wild pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Неинициализиран pointer с garbage стойност</text></answer>
+  <answer fraction="0"><text>NULL pointer</text></answer>
+  <answer fraction="0"><text>Dangling pointer</text></answer>
+  <answer fraction="0"><text>Void pointer</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 32</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава dereferencing NULL pointer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Segmentation fault (срив)</text></answer>
+  <answer fraction="0"><text>Връща 0</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <answer fraction="0"><text>Не прави нищо</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 33</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е stack overflow?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Препълване на call stack (често от recursion)</text></answer>
+  <answer fraction="0"><text>Heap overflow</text></answer>
+  <answer fraction="0"><text>Buffer overflow</text></answer>
+  <answer fraction="0"><text>Memory leak</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 34</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как алокирате 2D масив динамично?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Алокирате масив от pointers, после всеки pointer</text></answer>
+  <answer fraction="0"><text>malloc(rows * cols)</text></answer>
+  <answer fraction="0"><text>Не може динамично</text></answer>
+  <answer fraction="0"><text>calloc(rows, cols)</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 35</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е alignment в паметта?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Данните се подравняват на определени адреси</text></answer>
+  <answer fraction="0"><text>Подреждане на променливи</text></answer>
+  <answer fraction="0"><text>Оптимизация на код</text></answer>
+  <answer fraction="0"><text>Cache locality</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 36</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави sizeof(pointer)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Връща размера на pointer-а (не на данните)</text></answer>
+  <answer fraction="0"><text>Връща размера на данните</text></answer>
+  <answer fraction="0"><text>Грешка</text></answer>
+  <answer fraction="0"><text>Зависи от типа</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 37</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е memory fragmentation?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Неизползваема памет между allocated blocks</text></answer>
+  <answer fraction="0"><text>Memory leak</text></answer>
+  <answer fraction="0"><text>Corruption на данни</text></answer>
+  <answer fraction="0"><text>Cache miss</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 38</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е undefined behavior при pointers?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Поведение което не е дефинирано от C standard</text></answer>
+  <answer fraction="0"><text>NULL pointer</text></answer>
+  <answer fraction="0"><text>Wild pointer</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 39</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо трябва винаги да проверявате резултата от malloc?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Може да върне NULL при липса на памет</text></answer>
+  <answer fraction="0"><text>Само за debug</text></answer>
+  <answer fraction="0"><text>malloc винаги успява</text></answer>
+  <answer fraction="0"><text>За да избегнете предупреждение</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Pointers 40</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е best practice след free()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Да задавате pointer = NULL</text></answer>
+  <answer fraction="0"><text>Нищо, free е достатъчно</text></answer>
+  <answer fraction="0"><text>Да викате malloc отново</text></answer>
+  <answer fraction="0"><text>Да викате memset</text></answer>
+  <tags><tag><text>pointers</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- Continuing with remaining sections... Due to length, I'll add a note -->
+
+<!-- Note: To keep response reasonable, showing structure. Full file would continue with:
+     - STRUCTS (15 questions)
+     - ALGORITHMS (25 questions)
+     - COMPLEXITY (15 questions)
+     - RECURSION (10 questions)
+     - FILE I/O (10 questions)
+     - DATA STRUCTURES (20 questions)
+     - DEBUGGING (10 questions)
+     Total: 200 questions
+-->
+
+<!-- ========================================
+     STRUCTS (15 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Structs 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е struct в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>User-defined тип данни с множество членове</text></answer>
+  <answer fraction="0"><text>Масив от променливи</text></answer>
+  <answer fraction="0"><text>Тип функция</text></answer>
+  <answer fraction="0"><text>Pointer тип</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как декларирате struct?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>struct name { members; };</text></answer>
+  <answer fraction="0"><text>class name { members; };</text></answer>
+  <answer fraction="0"><text>type name { members; };</text></answer>
+  <answer fraction="0"><text>object name { members; };</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как достъпвате член на struct?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>С dot operator (s.member)</text></answer>
+  <answer fraction="0"><text>С :: operator</text></answer>
+  <answer fraction="0"><text>С [] brackets</text></answer>
+  <answer fraction="0"><text>С -> operator винаги</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави typedef със struct?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Създава alias за да избегнете struct keyword</text></answer>
+  <answer fraction="0"><text>Прави struct constant</text></answer>
+  <answer fraction="0"><text>Копира struct</text></answer>
+  <answer fraction="0"><text>Дефинира нов тип променлива</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да копирате struct с =?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Да, прави shallow copy</text></answer>
+  <answer fraction="0"><text>Не, трябва memcpy</text></answer>
+  <answer fraction="0"><text>Не, трябва цикъл</text></answer>
+  <answer fraction="0"><text>Да, прави deep copy</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е padding в struct?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Допълнителни bytes за memory alignment</text></answer>
+  <answer fraction="0"><text>Празно пространство в кода</text></answer>
+  <answer fraction="0"><text>Инициализация със нули</text></answer>
+  <answer fraction="0"><text>Грешка в компилатора</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как предавате struct на функция ефективно?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>По pointer (избягва копиране)</text></answer>
+  <answer fraction="0"><text>По стойност винаги</text></answer>
+  <answer fraction="0"><text>С return statement</text></answer>
+  <answer fraction="0"><text>Не може да се предава</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли struct да съдържа друг struct?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Да, nested structures</text></answer>
+  <answer fraction="0"><text>Не, забранено е</text></answer>
+  <answer fraction="0"><text>Само като pointer</text></answer>
+  <answer fraction="0"><text>Само със typedef</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли struct да съдържа pointer към себе си?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Да, за linked structures</text></answer>
+  <answer fraction="0"><text>Не, circular reference</text></answer>
+  <answer fraction="0"><text>Само с typedef</text></answer>
+  <answer fraction="0"><text>Само като масив</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е union в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Споделя памет между членове (само един наведнъж)</text></answer>
+  <answer fraction="0"><text>Същото като struct</text></answer>
+  <answer fraction="0"><text>Операция за обединяване</text></answer>
+  <answer fraction="0"><text>Тип на set</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между struct и union?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>struct запазва памет за всички, union споделя</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>union е по-бърз</text></answer>
+  <answer fraction="0"><text>struct е deprecated</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как инициализирате struct с designated initializers?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>struct s = {.member = value};</text></answer>
+  <answer fraction="0"><text>struct s = {member: value};</text></answer>
+  <answer fraction="0"><text>struct s.member = value;</text></answer>
+  <answer fraction="0"><text>struct s(member=value);</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е bit field в struct?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Член с конкретен брой bits</text></answer>
+  <answer fraction="0"><text>Boolean field</text></answer>
+  <answer fraction="0"><text>Binary операция</text></answer>
+  <answer fraction="0"><text>Bitwise member</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли да сравнявате struct с ==?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>Да, винаги</text></answer>
+  <answer fraction="100"><text>Не, трябва memcmp или custom функция</text></answer>
+  <answer fraction="0"><text>Да, ако е typedef</text></answer>
+  <answer fraction="0"><text>Само за primit members</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Structs 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Колко памет заема празен struct?]]></text>
+  </questiontext>
+  <answer fraction="0"><text>0 bytes</text></answer>
+  <answer fraction="100"><text>Обикновено 1 byte (зависи от компилатора)</text></answer>
+  <answer fraction="0"><text>4 bytes</text></answer>
+  <answer fraction="0"><text>sizeof(void*)</text></answer>
+  <tags><tag><text>structs</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<!-- ========================================
+     ALGORITHMS (25 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Algorithms 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е linear search?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Търсене елемент по елемент от начало до край</text></answer>
+  <answer fraction="0"><text>Търсене в сортиран масив</text></answer>
+  <answer fraction="0"><text>Binary search</text></answer>
+  <answer fraction="0"><text>Рекурсивно търсене</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на linear search?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е binary search?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Търсене в сортиран масив чрез половинение</text></answer>
+  <answer fraction="0"><text>Търсене на две стойности</text></answer>
+  <answer fraction="0"><text>Търсене в binary tree</text></answer>
+  <answer fraction="0"><text>Търсене с два pointers</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на binary search?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n log n)</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво изисква binary search?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Сортиран масив</text></answer>
+  <answer fraction="0"><text>Несортиран масив</text></answer>
+  <answer fraction="0"><text>Linked list</text></answer>
+  <answer fraction="0"><text>Hash table</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е bubble sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Сортиране чрез swap на съседни елементи</text></answer>
+  <answer fraction="0"><text>Сортиране с pivot</text></answer>
+  <answer fraction="0"><text>Сортиране чрез merge</text></answer>
+  <answer fraction="0"><text>Бързо сортиране</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е worst-case complexity на bubble sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n^2)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n log n)</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е selection sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Намиране на min/max и swap на позиция</text></answer>
+  <answer fraction="0"><text>Вмъкване елементи на правилно място</text></answer>
+  <answer fraction="0"><text>Разделяне и merge</text></answer>
+  <answer fraction="0"><text>Bubble операция</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е insertion sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Вмъкване елементи в сортирана част</text></answer>
+  <answer fraction="0"><text>Selection на минимални елементи</text></answer>
+  <answer fraction="0"><text>Bubble swap</text></answer>
+  <answer fraction="0"><text>Merge операция</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой сортиращ алгоритъм е най-добър за почти сортиран масив?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Insertion sort (O(n) в best case)</text></answer>
+  <answer fraction="0"><text>Bubble sort</text></answer>
+  <answer fraction="0"><text>Selection sort</text></answer>
+  <answer fraction="0"><text>Quick sort</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е merge sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Divide and conquer - раздели, сортирай, обедини</text></answer>
+  <answer fraction="0"><text>Сортиране чрез swap</text></answer>
+  <answer fraction="0"><text>Сортиране с pivot</text></answer>
+  <answer fraction="0"><text>Selection sort</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на merge sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n log n) във всички случаи</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какъв е недостатъка на merge sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Изисква допълнителна памет O(n)</text></answer>
+  <answer fraction="0"><text>Бавен е</text></answer>
+  <answer fraction="0"><text>Не работи винаги</text></answer>
+  <answer fraction="0"><text>Сложен за имплементация</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е quick sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Partition around pivot, рекурсивно сортиране</text></answer>
+  <answer fraction="0"><text>Бързо swap алгоритъм</text></answer>
+  <answer fraction="0"><text>Merge операция</text></answer>
+  <answer fraction="0"><text>Linear search</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е average-case complexity на quick sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 16</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е worst-case complexity на quick sort?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n^2) (при лош pivot избор)</text></answer>
+  <answer fraction="0"><text>O(n log n)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 17</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е stable sorting algorithm?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Запазва реда на равни елементи</text></answer>
+  <answer fraction="0"><text>Винаги O(n log n)</text></answer>
+  <answer fraction="0"><text>Не сриване алгоритъм</text></answer>
+  <answer fraction="0"><text>In-place сортиране</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 18</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой от следните е stable?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Merge sort</text></answer>
+  <answer fraction="0"><text>Quick sort (стандартен)</text></answer>
+  <answer fraction="0"><text>Selection sort</text></answer>
+  <answer fraction="0"><text>Heap sort</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 19</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава in-place алгоритъм?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Не изисква допълнителна памет O(n)</text></answer>
+  <answer fraction="0"><text>Сортира на място без swap</text></answer>
+  <answer fraction="0"><text>Работи само със stack</text></answer>
+  <answer fraction="0"><text>Не променя входа</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 20</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е divide and conquer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Разделяне на под-проблеми, решаване, комбиниране</text></answer>
+  <answer fraction="0"><text>Само разделяне на проблема</text></answer>
+  <answer fraction="0"><text>Greedy подход</text></answer>
+  <answer fraction="0"><text>Dynamic programming</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 21</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кой алгоритъм използва divide and conquer?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Merge sort</text></answer>
+  <answer fraction="0"><text>Bubble sort</text></answer>
+  <answer fraction="0"><text>Selection sort</text></answer>
+  <answer fraction="0"><text>Insertion sort</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 22</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е greedy algorithm?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Прави локално оптимален избор на всяка стъпка</text></answer>
+  <answer fraction="0"><text>Винаги намира глобалния оптимум</text></answer>
+  <answer fraction="0"><text>Бърз алгоритъм</text></answer>
+  <answer fraction="0"><text>Използва много памет</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 23</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е dynamic programming?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Решаване чрез запомняне на под-проблеми</text></answer>
+  <answer fraction="0"><text>Променящ се алгоритъм</text></answer>
+  <answer fraction="0"><text>Real-time програмиране</text></answer>
+  <answer fraction="0"><text>Рекурсия без base case</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 24</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е memoization?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Кеширане на резултати от скъпи функции</text></answer>
+  <answer fraction="0"><text>Запомняне на паметта</text></answer>
+  <answer fraction="0"><text>Memory optimization</text></answer>
+  <answer fraction="0"><text>Memo pattern</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Algorithms 25</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кога binary search е по-добър от linear?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Когато данните са сортирани</text></answer>
+  <answer fraction="0"><text>Винаги</text></answer>
+  <answer fraction="0"><text>Никога</text></answer>
+  <answer fraction="0"><text>Само за малки масиви</text></answer>
+  <tags><tag><text>algorithms</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<!-- ========================================
+     COMPLEXITY (15 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Complexity 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава Big O notation?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Upper bound на complexity (worst case)</text></answer>
+  <answer fraction="0"><text>Точната complexity</text></answer>
+  <answer fraction="0"><text>Best case complexity</text></answer>
+  <answer fraction="0"><text>Average complexity</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава O(1)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Constant time (не зависи от размера)</text></answer>
+  <answer fraction="0"><text>Винаги 1 операция</text></answer>
+  <answer fraction="0"><text>Най-бързо възможно</text></answer>
+  <answer fraction="0"><text>Linear time</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава O(n)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Linear time (пропорционално на входа)</text></answer>
+  <answer fraction="0"><text>n операции точно</text></answer>
+  <answer fraction="0"><text>Constant time</text></answer>
+  <answer fraction="0"><text>Logarithmic time</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава O(log n)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Logarithmic time (половинене на проблема)</text></answer>
+  <answer fraction="0"><text>Logfile операция</text></answer>
+  <answer fraction="0"><text>Log base 10</text></answer>
+  <answer fraction="0"><text>Linear time</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава O(n^2)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Quadratic time (nested цикли)</text></answer>
+  <answer fraction="0"><text>Двойно по-бавно от O(n)</text></answer>
+  <answer fraction="0"><text>Винаги n*2 операции</text></answer>
+  <answer fraction="0"><text>Експоненциално време</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Подредете от най-бърз към най-бавен:]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(1), O(log n), O(n), O(n log n), O(n^2)</text></answer>
+  <answer fraction="0"><text>O(n), O(1), O(log n), O(n^2), O(n log n)</text></answer>
+  <answer fraction="0"><text>O(log n), O(1), O(n), O(n^2), O(n log n)</text></answer>
+  <answer fraction="0"><text>Всички са еднакво бързи</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е space complexity на recursive factorial?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n) заради call stack</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е time complexity на масив access arr[i]?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>Зависи от i</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на двa nested цикли до n?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n^2)</text></answer>
+  <answer fraction="0"><text>O(2n)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава O(2^n)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Exponential time (много бавно)</text></answer>
+  <answer fraction="0"><text>Двойно по-бързо</text></answer>
+  <answer fraction="0"><text>Quadratic time</text></answer>
+  <answer fraction="0"><text>Binary операция</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на strlen()?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n) - трябва да брои до '\0'</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е amortized complexity?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Average complexity за серия от операции</text></answer>
+  <answer fraction="0"><text>Worst case</text></answer>
+  <answer fraction="0"><text>Best case</text></answer>
+  <answer fraction="0"><text>Space complexity</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[В Big O, 5n + 100 е:]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n) - константите се игнорират</text></answer>
+  <answer fraction="0"><text>O(5n + 100)</text></answer>
+  <answer fraction="0"><text>O(100)</text></answer>
+  <answer fraction="0"><text>O(5n)</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между O(n) и Θ(n)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O е upper bound, Θ е tight bound</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>Θ е по-бързо</text></answer>
+  <answer fraction="0"><text>O е за време, Θ за памет</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Complexity 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава Ω (Omega) notation?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Lower bound (best case)</text></answer>
+  <answer fraction="0"><text>Upper bound</text></answer>
+  <answer fraction="0"><text>Average case</text></answer>
+  <answer fraction="0"><text>Space complexity</text></answer>
+  <tags><tag><text>complexity</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<!-- ========================================
+     RECURSION (10 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Recursion 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е recursion?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Функция която извиква себе си</text></answer>
+  <answer fraction="0"><text>Цикъл в функция</text></answer>
+  <answer fraction="0"><text>Nested функции</text></answer>
+  <answer fraction="0"><text>Callback функция</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е base case в recursion?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Условие за спиране на рекурсията</text></answer>
+  <answer fraction="0"><text>Първото извикване</text></answer>
+  <answer fraction="0"><text>Рекурсивната част</text></answer>
+  <answer fraction="0"><text>Return statement</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво се случва без base case?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Infinite recursion → stack overflow</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <answer fraction="0"><text>Връща NULL</text></answer>
+  <answer fraction="0"><text>Автоматично спира</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кое е рекурсивно определение на factorial(n)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>n * factorial(n-1), base: factorial(0) = 1</text></answer>
+  <answer fraction="0"><text>n * n-1 * n-2 ...</text></answer>
+  <answer fraction="0"><text>n + factorial(n-1)</text></answer>
+  <answer fraction="0"><text>factorial(n) = n</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кое е рекурсивно Fibonacci(n)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Fib(n-1) + Fib(n-2), base: Fib(0)=0, Fib(1)=1</text></answer>
+  <answer fraction="0"><text>Fib(n) * Fib(n-1)</text></answer>
+  <answer fraction="0"><text>n + Fib(n-1)</text></answer>
+  <answer fraction="0"><text>2 * Fib(n-1)</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е time complexity на naive recursive Fibonacci?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(2^n) - експоненциално</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е tail recursion?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Рекурсивно извикване като последна операция</text></answer>
+  <answer fraction="0"><text>Рекурсия в края на програмата</text></answer>
+  <answer fraction="0"><text>Последната рекурсия</text></answer>
+  <answer fraction="0"><text>Рекурсия без base case</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Може ли всяка recursion да се замени с цикъл?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Да, винаги</text></answer>
+  <answer fraction="0"><text>Не, никога</text></answer>
+  <answer fraction="0"><text>Само tail recursion</text></answer>
+  <answer fraction="0"><text>Само за прости случаи</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кога е recursion по-добра от iteration?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>При tree/graph traversal, естествено рекурсивни проблеми</text></answer>
+  <answer fraction="0"><text>Винаги</text></answer>
+  <answer fraction="0"><text>Никога</text></answer>
+  <answer fraction="0"><text>Само за sorting</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Recursion 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Къде се съхраняват recursive function calls?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>В call stack</text></answer>
+  <answer fraction="0"><text>В heap</text></answer>
+  <answer fraction="0"><text>В глобалната памет</text></answer>
+  <answer fraction="0"><text>В registers</text></answer>
+  <tags><tag><text>recursion</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- ========================================
+     FILE I/O (10 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>FileIO 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е FILE* в C?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Pointer към file stream структура</text></answer>
+  <answer fraction="0"><text>Име на файл</text></answer>
+  <answer fraction="0"><text>File size</text></answer>
+  <answer fraction="0"><text>File descriptor</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как отваряте файл за четене?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>fopen("file.txt", "r")</text></answer>
+  <answer fraction="0"><text>open("file.txt")</text></answer>
+  <answer fraction="0"><text>fopen("file.txt", "read")</text></answer>
+  <answer fraction="0"><text>file_open("file.txt")</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво връща fopen при грешка?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>NULL</text></answer>
+  <answer fraction="0"><text>-1</text></answer>
+  <answer fraction="0"><text>0</text></answer>
+  <answer fraction="0"><text>Exception</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как затваряте файл?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>fclose(file)</text></answer>
+  <answer fraction="0"><text>close(file)</text></answer>
+  <answer fraction="0"><text>file.close()</text></answer>
+  <answer fraction="0"><text>free(file)</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво прави fprintf?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Принтира форматиран текст във файл</text></answer>
+  <answer fraction="0"><text>Принтира на конзолата</text></answer>
+  <answer fraction="0"><text>Чете от файл</text></answer>
+  <answer fraction="0"><text>Форматира файл</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава "w" mode в fopen?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Write (презаписва файла)</text></answer>
+  <answer fraction="0"><text>Write (добавя към файла)</text></answer>
+  <answer fraction="0"><text>Read and write</text></answer>
+  <answer fraction="0"><text>Word mode</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво означава "a" mode?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Append (добавя в края)</text></answer>
+  <answer fraction="0"><text>All access</text></answer>
+  <answer fraction="0"><text>ASCII mode</text></answer>
+  <answer fraction="0"><text>Automatic mode</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Как четете един char от файл?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>fgetc(file)</text></answer>
+  <answer fraction="0"><text>getc()</text></answer>
+  <answer fraction="0"><text>read(file)</text></answer>
+  <answer fraction="0"><text>fread(file, 1)</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво връща fgetc при край на файл?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>EOF</text></answer>
+  <answer fraction="0"><text>NULL</text></answer>
+  <answer fraction="0"><text>0</text></answer>
+  <answer fraction="0"><text>'\0'</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>FileIO 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо трябва да затваряте файлове?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>За да flush-нете буфера и освободите ресурси</text></answer>
+  <answer fraction="0"><text>Само за добра практика</text></answer>
+  <answer fraction="0"><text>OS го прави автоматично винаги</text></answer>
+  <answer fraction="0"><text>Не е необходимо</text></answer>
+  <tags><tag><text>fileio</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- ========================================
+     DATA STRUCTURES (20 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>DataStruct 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е linked list?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Серия от nodes свързани с pointers</text></answer>
+  <answer fraction="0"><text>Масив с динамичен размер</text></answer>
+  <answer fraction="0"><text>Tree структура</text></answer>
+  <answer fraction="0"><text>Hash table</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между масив и linked list?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Масив е contiguous, linked list е scattered</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>Linked list е по-бърз винаги</text></answer>
+  <answer fraction="0"><text>Масив не може dynamic size</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на insert в началото на linked list?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е complexity на search в linked list?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е stack?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>LIFO структура (Last In First Out)</text></answer>
+  <answer fraction="0"><text>FIFO структура</text></answer>
+  <answer fraction="0"><text>Tree структура</text></answer>
+  <answer fraction="0"><text>Random access структура</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е queue?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>FIFO структура (First In First Out)</text></answer>
+  <answer fraction="0"><text>LIFO структура</text></answer>
+  <answer fraction="0"><text>Priority based</text></answer>
+  <answer fraction="0"><text>Random access</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кои са основните stack операции?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>push, pop, peek/top</text></answer>
+  <answer fraction="0"><text>insert, delete, search</text></answer>
+  <answer fraction="0"><text>enqueue, dequeue</text></answer>
+  <answer fraction="0"><text>add, remove, get</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Кои са основните queue операции?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>enqueue, dequeue, front</text></answer>
+  <answer fraction="0"><text>push, pop</text></answer>
+  <answer fraction="0"><text>insert, delete</text></answer>
+  <answer fraction="0"><text>add, remove</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е hash table?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Key-value структура с hash функция</text></answer>
+  <answer fraction="0"><text>Sorted масив</text></answer>
+  <answer fraction="0"><text>Tree структура</text></answer>
+  <answer fraction="0"><text>Linked list</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е average complexity на hash table lookup?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 11</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е collision в hash table?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Два keys с еднакъв hash</text></answer>
+  <answer fraction="0"><text>Грешка в hash функцията</text></answer>
+  <answer fraction="0"><text>Препълване на таблицата</text></answer>
+  <answer fraction="0"><text>Duplicate keys</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 12</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е chaining за collision resolution?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Linked list в bucket-а</text></answer>
+  <answer fraction="0"><text>Търсене на следващ празен slot</text></answer>
+  <answer fraction="0"><text>Увеличаване на таблицата</text></answer>
+  <answer fraction="0"><text>Повторен hash</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 13</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е trie (prefix tree)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Tree за съхранение на strings по префикс</text></answer>
+  <answer fraction="0"><text>Binary search tree</text></answer>
+  <answer fraction="0"><text>Hash table за strings</text></answer>
+  <answer fraction="0"><text>Sorted масив</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 14</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е binary tree?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Tree където всеки node има max 2 деца</text></answer>
+  <answer fraction="0"><text>Tree с два levels</text></answer>
+  <answer fraction="0"><text>Tree със binary данни</text></answer>
+  <answer fraction="0"><text>Balanced tree</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 15</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е binary search tree (BST)?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Binary tree със sorted свойство (left < root < right)</text></answer>
+  <answer fraction="0"><text>Tree за binary search алгоритъм</text></answer>
+  <answer fraction="0"><text>Balanced binary tree</text></answer>
+  <answer fraction="0"><text>Tree с два nodes</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 16</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е average complexity на BST search?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(log n) при balanced tree</text></answer>
+  <answer fraction="0"><text>O(n)</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n^2)</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 17</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е worst case за BST?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>O(n) при degenerate tree (линеен)</text></answer>
+  <answer fraction="0"><text>O(log n)</text></answer>
+  <answer fraction="0"><text>O(1)</text></answer>
+  <answer fraction="0"><text>O(n log n)</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 18</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е graph?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Nodes (vertices) свързани с edges</text></answer>
+  <answer fraction="0"><text>Визуална диаграма</text></answer>
+  <answer fraction="0"><text>Tree структура</text></answer>
+  <answer fraction="0"><text>Matrix от данни</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 19</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Каква е разликата между tree и graph?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Tree е acyclic connected graph</text></answer>
+  <answer fraction="0"><text>Няма разлика</text></answer>
+  <answer fraction="0"><text>Tree е по-бърз</text></answer>
+  <answer fraction="0"><text>Graph е винаги по-голям</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>DataStruct 20</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е adjacency list в graph?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Списък на съседи за всеки vertex</text></answer>
+  <answer fraction="0"><text>Матрица на връзките</text></answer>
+  <answer fraction="0"><text>Sorted vertices</text></answer>
+  <answer fraction="0"><text>Edge weights</text></answer>
+  <tags><tag><text>datastructures</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- ========================================
+     DEBUGGING & BEST PRACTICES (10 questions)
+     ======================================== -->
+
+<question type="multichoice">
+  <name><text>Debug 01</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е debugger?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Tool за step-by-step изпълнение и инспекция</text></answer>
+  <answer fraction="0"><text>Compiler предупреждение</text></answer>
+  <answer fraction="0"><text>Bug detection tool</text></answer>
+  <answer fraction="0"><text>Testing framework</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 02</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е breakpoint?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Точка където debugger-а спира изпълнението</text></answer>
+  <answer fraction="0"><text>Грешка в кода</text></answer>
+  <answer fraction="0"><text>Crash point</text></answer>
+  <answer fraction="0"><text>End of program</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 03</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е valgrind?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Tool за намиране на memory leaks и errors</text></answer>
+  <answer fraction="0"><text>Compiler</text></answer>
+  <answer fraction="0"><text>Text editor</text></answer>
+  <answer fraction="0"><text>Validator за код</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 04</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е rubber duck debugging?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Обяснявате кода на неодушевен обект</text></answer>
+  <answer fraction="0"><text>Debug с конкретен tool</text></answer>
+  <answer fraction="0"><text>Pair programming</text></answer>
+  <answer fraction="0"><text>Unit testing метод</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 05</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо е важно да проверявате return values?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>За да catch-нете грешки (malloc fail, fopen fail)</text></answer>
+  <answer fraction="0"><text>Само за стил</text></answer>
+  <answer fraction="0"><text>Compiler изисква</text></answer>
+  <answer fraction="0"><text>Не е необходимо</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 06</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е assertion?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Проверка на условие, срив ако е false</text></answer>
+  <answer fraction="0"><text>Декларация на променлива</text></answer>
+  <answer fraction="0"><text>Assignment statement</text></answer>
+  <answer fraction="0"><text>Function call</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 07</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо е важно да освобождавате памет?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Избягване на memory leaks</text></answer>
+  <answer fraction="0"><text>Само за стил</text></answer>
+  <answer fraction="0"><text>OS го прави автоматично винаги</text></answer>
+  <answer fraction="0"><text>Не е необходимо в C</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 08</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е хубава практика с magic numbers?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Да ги замените с named константи</text></answer>
+  <answer fraction="0"><text>Да ги използвате директно</text></answer>
+  <answer fraction="0"><text>Да ги коментирате</text></answer>
+  <answer fraction="0"><text>Да ги криптирате</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 09</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Защо е важно да използвате meaningful имена?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Кодът става по-четлив и поддържаем</text></answer>
+  <answer fraction="0"><text>Compiler работи по-бързо</text></answer>
+  <answer fraction="0"><text>Задължително е по стандарт</text></answer>
+  <answer fraction="0"><text>Намалява размера</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Debug 10</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво е code smell?]]></text>
+  </questiontext>
+  <answer fraction="100"><text>Индикатор за потенциален проблем в кода</text></answer>
+  <answer fraction="0"><text>Bug в кода</text></answer>
+  <answer fraction="0"><text>Грешка при компилиране</text></answer>
+  <answer fraction="0"><text>Deprecated функция</text></answer>
+  <tags><tag><text>debugging</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+</quiz>
