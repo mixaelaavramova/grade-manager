@@ -34,6 +34,13 @@
             </div>
           </div>
           <div class="flex items-center gap-4">
+            <a href="quiz.html"
+               class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-lg text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all">
+              <svg class="-ml-1 mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              📝 CS50 Тест
+            </a>
             <div id="user-info" class="flex items-center gap-3"></div>
             <button id="logout"
                     class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
@@ -243,18 +250,47 @@
         assignments.forEach(assignment => {
           // Extract assignment name from repo name
           // GitHub Classroom format is typically: "assignment-name-username" or just "assignment-name"
-          let assignmentName = assignment.name.toLowerCase();
+          let repoName = assignment.name.toLowerCase();
 
-          // Remove common prefixes (org name, username patterns)
-          assignmentName = assignmentName.replace(/^nvnacs50-/i, '');
-          assignmentName = assignmentName.replace(/-[a-z0-9]+$/i, ''); // Remove username suffix if exists
+          // Remove org prefix
+          repoName = repoName.replace(/^nvnacs50-/i, '');
 
-          // Add to accepted assignments
-          userAssignments.add(assignmentName);
+          // Build list of all possible assignment names
+          const possibleNames = [];
+          CS50_ASSIGNMENTS.forEach(cs50Assignment => {
+            if (cs50Assignment.type === 'required') {
+              possibleNames.push(cs50Assignment.name);
+              if (cs50Assignment.alternativeNames) {
+                possibleNames.push(...cs50Assignment.alternativeNames);
+              }
+            } else if (cs50Assignment.type === 'choice') {
+              cs50Assignment.options.forEach(option => {
+                possibleNames.push(option.name);
+              });
+            }
+          });
 
-          // If tests passed, add to successful
-          if (assignment.status === 'success') {
-            window.successfulAssignments.add(assignmentName);
+          // Sort by length descending to match longest first
+          // This ensures "mario-less" matches before "mario" (if "mario" existed)
+          possibleNames.sort((a, b) => b.length - a.length);
+
+          // Find the assignment name
+          let assignmentName = null;
+          for (const name of possibleNames) {
+            // Check if repo name starts with this assignment name
+            // followed by a dash (and then username) or is exactly this name
+            if (repoName === name || repoName.startsWith(name + '-')) {
+              assignmentName = name;
+              break;
+            }
+          }
+
+          // If found, add it
+          if (assignmentName) {
+            userAssignments.add(assignmentName);
+            if (assignment.status === 'success') {
+              window.successfulAssignments.add(assignmentName);
+            }
           }
         });
 

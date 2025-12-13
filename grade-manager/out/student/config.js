@@ -1,3 +1,5 @@
+
+
 // GitHub Classroom Dashboard Configuration
 // ВАЖНО: Попълни тези стойности след като създадеш OAuth App
 
@@ -23,7 +25,23 @@ const CONFIG = {
 
   get BASE_URL() {
     return window.location.origin;
-  }
+  },
+
+
+  // Quiz Questions Gist ID (PUBLIC)
+  // Въпросите са в public Gist (не в repo)
+  QUIZ_QUESTIONS_GIST_ID: '3633387239d3257a62397134fb1c9bb5',
+
+  // Quiz Results Gist ID (PRIVATE)
+  // Учителят вижда всички резултати тук
+  QUIZ_RESULTS_GIST_ID: 'decf38f65f3a2dcd46771afec0069d06',
+
+  // Cloudflare Worker URL (saves results securely)
+  // Teacher's token is stored as Worker secret (not in code)
+  QUIZ_RESULTS_WORKER_URL: 'https://quiz-results-saver.m-avramova.workers.dev',
+
+  // Quiz access password
+  QUIZ_ACCESS_PASSWORD: 'testC2025'
 };
 
 // Export за използване в други scripts

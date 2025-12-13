@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- Code Output Questions - For Loops -->
+
+<question type="multichoice">
+  <name><text>For Loop Output 1</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+for (int i = 0; i < 3; i++)
+{
+    printf("%d ", i);
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>0 1 2</text></answer>
+  <answer fraction="0"><text>0 1 2 3</text></answer>
+  <answer fraction="0"><text>1 2 3</text></answer>
+  <answer fraction="0"><text>0 2 4</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>For Loop Output 2</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+for (int i = 5; i > 2; i--)
+{
+    printf("%d ", i);
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>5 4 3</text></answer>
+  <answer fraction="0"><text>5 4 3 2</text></answer>
+  <answer fraction="0"><text>2 3 4 5</text></answer>
+  <answer fraction="0"><text>3 4 5</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>For Loop Output 3</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+for (int i = 0; i < 5; i += 2)
+{
+    printf("%d ", i);
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>0 2 4</text></answer>
+  <answer fraction="0"><text>0 1 2 3 4</text></answer>
+  <answer fraction="0"><text>2 4 6</text></answer>
+  <answer fraction="0"><text>0 2 4 6</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Nested For Loop Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+for (int i = 1; i <= 2; i++)
+{
+    for (int j = 1; j <= 2; j++)
+    {
+        printf("%d%d ", i, j);
+    }
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>11 12 21 22</text></answer>
+  <answer fraction="0"><text>12 21</text></answer>
+  <answer fraction="0"><text>1 2 1 2</text></answer>
+  <answer fraction="0"><text>11 22</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- Code Output Questions - While Loops -->
+
+<question type="multichoice">
+  <name><text>While Loop Output 1</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int i = 0;
+while (i < 3)
+{
+    printf("%d ", i);
+    i++;
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>0 1 2</text></answer>
+  <answer fraction="0"><text>0 1 2 3</text></answer>
+  <answer fraction="0"><text>1 2 3</text></answer>
+  <answer fraction="0"><text>Безкраен цикъл</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>While Loop Output 2</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 10;
+while (x > 7)
+{
+    printf("%d ", x);
+    x--;
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>10 9 8</text></answer>
+  <answer fraction="0"><text>10 9 8 7</text></answer>
+  <answer fraction="0"><text>7 8 9 10</text></answer>
+  <answer fraction="0"><text>8 9 10</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>While Loop with Break</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int i = 0;
+while (i < 5)
+{
+    if (i == 3)
+        break;
+    printf("%d ", i);
+    i++;
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>0 1 2</text></answer>
+  <answer fraction="0"><text>0 1 2 3</text></answer>
+  <answer fraction="0"><text>0 1 2 3 4</text></answer>
+  <answer fraction="0"><text>3 4</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Do-While Loop Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int i = 5;
+do
+{
+    printf("%d ", i);
+    i--;
+} while (i > 5);
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>5</text></answer>
+  <answer fraction="0"><text>Нищо няма да изведе</text></answer>
+  <answer fraction="0"><text>5 4 3 2 1</text></answer>
+  <answer fraction="0"><text>Грешка</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- Code Output Questions - If-Else -->
+
+<question type="multichoice">
+  <name><text>If-Else Output 1</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 10;
+if (x > 5)
+    printf("A");
+else
+    printf("B");
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>A</text></answer>
+  <answer fraction="0"><text>B</text></answer>
+  <answer fraction="0"><text>AB</text></answer>
+  <answer fraction="0"><text>Нищо</text></answer>
+  <tags><tag><text>conditionals</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>If-Else Output 2</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 5;
+if (x % 2 == 0)
+    printf("Even");
+else
+    printf("Odd");
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>Odd</text></answer>
+  <answer fraction="0"><text>Even</text></answer>
+  <answer fraction="0"><text>EvenOdd</text></answer>
+  <answer fraction="0"><text>5</text></answer>
+  <tags><tag><text>conditionals</text></tag><tag><text>easy</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>If-Else-If Chain Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int score = 75;
+if (score >= 90)
+    printf("A");
+else if (score >= 70)
+    printf("B");
+else
+    printf("C");
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>B</text></answer>
+  <answer fraction="0"><text>A</text></answer>
+  <answer fraction="0"><text>C</text></answer>
+  <answer fraction="0"><text>BC</text></answer>
+  <tags><tag><text>conditionals</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Nested If Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 8;
+if (x > 5)
+{
+    if (x < 10)
+        printf("YES");
+    else
+        printf("NO");
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>YES</text></answer>
+  <answer fraction="0"><text>NO</text></answer>
+  <answer fraction="0"><text>YESNO</text></answer>
+  <answer fraction="0"><text>Нищо</text></answer>
+  <tags><tag><text>conditionals</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<!-- Combined For + If -->
+
+<question type="multichoice">
+  <name><text>For Loop with If Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+for (int i = 1; i <= 5; i++)
+{
+    if (i % 2 == 0)
+        printf("%d ", i);
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>2 4</text></answer>
+  <answer fraction="0"><text>1 3 5</text></answer>
+  <answer fraction="0"><text>1 2 3 4 5</text></answer>
+  <answer fraction="0"><text>2 4 6</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>While with Continue Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int i = 0;
+while (i < 5)
+{
+    i++;
+    if (i == 3)
+        continue;
+    printf("%d ", i);
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>1 2 4 5</text></answer>
+  <answer fraction="0"><text>0 1 2 3 4</text></answer>
+  <answer fraction="0"><text>1 2 3 4 5</text></answer>
+  <answer fraction="0"><text>0 1 2 4</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Nested Loop Output Pattern</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+for (int i = 1; i <= 3; i++)
+{
+    for (int j = 1; j <= i; j++)
+    {
+        printf("*");
+    }
+    printf("\n");
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>*\n**\n***\n</text></answer>
+  <answer fraction="0"><text>******</text></answer>
+  <answer fraction="0"><text>***\n**\n*\n</text></answer>
+  <answer fraction="0"><text>* * *</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>For Loop Counter Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int count = 0;
+for (int i = 0; i < 4; i++)
+{
+    count += i;
+}
+printf("%d", count);
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>6</text></answer>
+  <answer fraction="0"><text>10</text></answer>
+  <answer fraction="0"><text>4</text></answer>
+  <answer fraction="0"><text>0</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Ternary Operator Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 7;
+int y = (x > 5) ? 10 : 20;
+printf("%d", y);
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>10</text></answer>
+  <answer fraction="0"><text>20</text></answer>
+  <answer fraction="0"><text>7</text></answer>
+  <answer fraction="0"><text>5</text></answer>
+  <tags><tag><text>conditionals</text></tag><tag><text>medium</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>While Loop with Multiple Conditions</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 0, y = 5;
+while (x < 3 && y > 3)
+{
+    printf("%d ", x + y);
+    x++;
+    y--;
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>5 5</text></answer>
+  <answer fraction="0"><text>5 5 5</text></answer>
+  <answer fraction="0"><text>0 5</text></answer>
+  <answer fraction="0"><text>Нищо</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>For Loop with Post-increment</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int i;
+for (i = 0; i < 3; i++)
+{
+    printf("%d ", i);
+}
+printf("%d", i);
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>0 1 2 3</text></answer>
+  <answer fraction="0"><text>0 1 2</text></answer>
+  <answer fraction="0"><text>0 1 2 2</text></answer>
+  <answer fraction="0"><text>1 2 3 4</text></answer>
+  <tags><tag><text>loops</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+<question type="multichoice">
+  <name><text>Switch Case Output</text></name>
+  <questiontext format="html">
+    <text><![CDATA[Какво ще изведе този код?
+<pre>
+int x = 2;
+switch(x)
+{
+    case 1:
+        printf("A");
+        break;
+    case 2:
+        printf("B");
+    case 3:
+        printf("C");
+        break;
+    default:
+        printf("D");
+}
+</pre>]]></text>
+  </questiontext>
+  <shuffleanswers>true</shuffleanswers>
+  <answer fraction="100"><text>BC</text></answer>
+  <answer fraction="0"><text>B</text></answer>
+  <answer fraction="0"><text>C</text></answer>
+  <answer fraction="0"><text>BCD</text></answer>
+  <tags><tag><text>conditionals</text></tag><tag><text>hard</text></tag></tags>
+</question>
+
+</quiz>
