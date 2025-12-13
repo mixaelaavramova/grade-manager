@@ -28,7 +28,7 @@ const CONFIG = {
   // Quiz Questions Gist ID (PRIVATE)
   // Попълва се автоматично от upload-questions-to-gist.js скрипта
   // Или ръчно след създаване на private Gist
-  QUIZ_QUESTIONS_GIST_ID: '' // Teacher will fill this
+  QUIZ_QUESTIONS_GIST_ID: '33129df1fb799313ad5d7542446d259c' // Teacher will fill this
 };
 
 // Export за използване в други scripts
